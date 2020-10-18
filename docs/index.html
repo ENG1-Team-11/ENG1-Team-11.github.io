@@ -4,38 +4,131 @@
 
 <head>
     <meta charset="UTF-8">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title>ENG1 Team 11</title>
+    <link rel="stylesheet" href="../styles/nav.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Documentation</title>
 </head>
 
 <body>
-    <div class="navbar navbar-expand-md navbar-dark bg-dark">
-        <div class="container">
-            <a class="navbar-brand">ENG1 Team 11</a>
-            <ul class="navbar-nav mr-auto">
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Home</a>
-                </li>
-                <li class="nav-item active">
-                    <a class="nav-link" href="docs">Docs</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="product">Boat Race Game</a>
-                </li>
-            </ul>>
-        </div>
-    </div>
-    <div class="container">
-        <div class="jumbotron">
-            <h1>Docs Page</h1>
-        </div>
-    </div>
-</body>
 
-<foot>
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
-</foot>
+    <script>
+        function openNav() {
+          document.getElementById("mainSidenav").style.width = "250px";
+          document.getElementById("main").style.marginLeft = "250px";
+        }
+
+        function closeNav() {
+          document.getElementById("mainSidenav").style.width = "0";
+          document.getElementById("main").style.marginLeft = "0";
+        }
+
+        var btn = $('#to-top-btn');
+
+        $(window).scroll(function() {
+          if ($(window).scrollTop() > 300) {
+            btn.addClass('show');
+          } else {
+            btn.removeClass('show');
+          }
+        });
+
+        btn.on('click', function(e) {
+          e.preventDefault();
+          $('html, body').animate({scrollTop:0}, '300');
+        });
+
+    </script>
+
+    <a id="to-top-btn"></a>
+
+    <div id="mainSidenav" class="sidenav">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        <a href="../index.html" class="link">Home</a>
+        <a href="../about.html" class="link">About</a>
+        <a href="?" class="link">Documentation</a>
+        <a href="#" class="link">Game</a>
+        <a href="https://github.com/ENG1-Team-11/boatgame3d" class="link">GitHub project</a>
+    </div>
+
+    <div class="header">
+
+      <div onclick="openNav()" class="trigram">
+        <div class="trigram-line"></div>
+        <div class="trigram-line"></div>
+        <div class="trigram-line"></div>
+      </div>
+      <div class="main">
+          <h1>York Dragon Boat Race</h1>
+          <p>ENG1 Team 11 project</p>
+          <hr>
+      </div>
+
+    </div>
+
+    <div class="body">
+
+        <!-- table of contents -->
+        <h2>Documentation</h2>
+        <ul class="list">
+          <li><a href="#requirements">Requirements</a></li>
+          <li><a href="#architecture">Architecture</a></li>
+          <li><a href="#method">Method selection and planning</a></li>
+          <li><a href="#risks">Risk assessment and mitigation</a></li>
+          <li><a href="#implemenatation">Implementation</a></li>
+          <li><a href="#testing">Software Testing Report</a></li>
+          <li><a href="#integration">Continuous Integration Report</a></li>
+        </ul>
+
+
+      <div class="contents">
+
+        <!-- placeholder for the actual text -->
+        <h2 id="requirements">Requirements</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus tempor dolor ut lectus tempus lobortis.
+          In ac massa quis ex tincidunt auctor. Integer blandit auctor massa, sit amet pretium nibh rutrum at. Suspendisse
+          sed nisl eget mauris pharetra blandit. Mauris ipsum lectus, vulputate id scelerisque eget, molestie eu risus.
+          Aenean et faucibus est. Proin vel euismod est, elementum vehicula erat. Vestibulum eget euismod enim. Mauris
+          justo tellus, congue ut posuere id, ullamcorper eleifend urna. Morbi justo urna, sodales non dictum et, pharetra
+          id tortor. Etiam eget quam odio. Morbi urna ipsum, tristique nec odio in, volutpat lobortis lorem. Donec vel mi
+          sit amet felis pharetra eleifend et at turpis. Curabitur eget velit placerat, scelerisque nibh quis, auctor libero.</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus tempor dolor ut lectus tempus lobortis.
+          In ac massa quis ex tincidunt auctor. Integer blandit auctor massa, sit amet pretium nibh rutrum at. Suspendisse
+          sed nisl eget mauris pharetra blandit. Mauris ipsum lectus, vulputate id scelerisque eget, molestie eu risus.
+          Aenean et faucibus est. Proin vel euismod est, elementum vehicula erat. Vestibulum eget euismod enim. Mauris
+          jsto tellus, congue ut posuere id, ullamcorper eleifend urna. Morbi justo urna, sodales non dictum et, pharetra
+          id tortor. Etiam eget quam odio. Morbi urna ipsum, tristique nec odio in, volutpat lobortis lorem. Donec vel mi
+          sit amet felis pharetra eleifend et at turpis. Curabitur eget velit placerat, scelerisque nibh quis, auctor libero.</p>
+
+          <a href="#" class="download-link">Download Requirements pdf >></a>
+        </div>
+
+        <div class="contents">
+          <h2 id="architecture">Architecture</h2>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus tempor dolor ut lectus tempus lobortis.
+            In ac massa quis ex tincidunt auctor. Integer blandit auctor massa, sit amet pretium nibh rutrum at. Suspendisse
+            sed nisl eget mauris pharetra blandit. Mauris ipsum lectus, vulputate id scelerisque eget, molestie eu risus.
+            Aenean et faucibus est. Proin vel euismod est, elementum vehicula erat. Vestibulum eget euismod enim. Mauris
+            justo tellus, congue ut posuere id, ullamcorper eleifend urna. Morbi justo urna, sodales non dictum et, pharetra
+            id tortor. Etiam eget quam odio. Morbi urna ipsum, tristique nec odio in, volutpat lobortis lorem. Donec vel mi
+            sit amet felis pharetra eleifend et at turpis. Curabitur eget velit placerat, scelerisque nibh quis, auctor libero.</p>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus tempor dolor ut lectus tempus lobortis.
+            In ac massa quis ex tincidunt auctor. Integer blandit auctor massa, sit amet pretium nibh rutrum at. Suspendisse
+            sed nisl eget mauris pharetra blandit. Mauris ipsum lectus, vulputate id scelerisque eget, molestie eu risus.
+            Aenean et faucibus est. Proin vel euismod est, elementum vehicula erat. Vestibulum eget euismod enim. Mauris
+            jsto tellus, congue ut posuere id, ullamcorper eleifend urna. Morbi justo urna, sodales non dictum et, pharetra
+            id tortor. Etiam eget quam odio. Morbi urna ipsum, tristique nec odio in, volutpat lobortis lorem. Donec vel mi
+            sit amet felis pharetra eleifend et at turpis. Curabitur eget velit placerat, scelerisque nibh quis, auctor libero.</p>
+
+            <a href="#" class="download-link">Download Architecture pdf >></a>
+          </div>
+
+    </div>
+
+    <div class="footer">
+
+    </div>
+
+</body>
 
 </html>

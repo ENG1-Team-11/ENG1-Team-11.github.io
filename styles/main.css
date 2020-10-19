@@ -138,3 +138,10 @@
 .footer {
   height: 100px;
 }
+
+#boathr {
+  border: 0px;
+  border-spacing: 0px;
+  padding: 0px;
+  border-collapse;
+}

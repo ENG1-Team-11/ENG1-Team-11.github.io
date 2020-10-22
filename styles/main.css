@@ -1,0 +1,147 @@
+.header {
+  display: -ms-flexbox; /* IE10 */
+  display: flex;
+  -ms-flex-wrap: wrap; /* IE10 */
+  flex-wrap: wrap;
+}
+
+.header .main {
+  text-align: center;
+  -ms-flex: 90%; /* IE10 */
+  flex: 90%;
+  top: 0;
+}
+
+.header h1 {
+  background: -webkit-linear-gradient(#06073e, #004e67);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-size: 35px;
+  font-family:  Georgia, serif;
+  bottom: 0;
+  margin: 0px 0px 0px 0px;
+  padding: 25px 0px 0px 0px
+}
+
+.header p {
+  color: #7c828a;
+  font-size: 20px;
+  font-family: Candara, Calibri, Segoe, Segoe UI, Optima, Arial, sans-serif;
+  top: 0;
+  margin: 0px 0px 0px 0px;
+  padding: 5px 0px 25px 0px
+}
+
+.header .trigram {
+  position: absolute;
+  -ms-flex: 10%; /* IE10 */
+  flex: 10%;
+  padding: 20px;
+}
+
+.trigram .trigram-line {
+  width: 25px;
+  height: 4px;
+  background-color: #06073e;
+  margin: 4px 0;
+}
+
+.header hr {
+  height: 1px;
+  background-color: #e4ebf0;/* #d3d7e3; */
+  color: #e4ebf0;
+  width: 100%;
+  border: none;
+}
+
+.body {
+  width: 800px;
+  margin: auto;
+  padding-top: 40px;
+  font-family: Georgia, serif;
+}
+
+.body h2 {
+  font-size: 25px;
+  color: #484848;
+}
+
+.body p {
+  font-size: 20px;
+  color: #484848;
+  line-height: 1.6;
+}
+
+.body img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  padding-top: 30px;
+  width: 800px;
+}
+
+.list{
+  list-style-type: circle;
+}
+
+.list a {
+  font-size: 22px;
+  color: #004e67;
+  line-height: 1.7;
+  text-decoration: none;
+}
+
+.contents {
+  padding-top: 50px;
+}
+
+.download-link {
+  font-size: 20px;
+  color: #004e67;
+  text-decoration: none;
+}
+
+#to-top-btn {
+  display: inline-block;
+  width: 50px;
+  height: 50px;
+  text-align: center;
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  transition: background-color .3s,
+    opacity .5s, visibility .5s;
+  opacity: 0;
+  visibility: hidden;
+  z-index: 1000;
+  background-color: white;
+}
+
+#to-top-btn::after {
+  content: "Back to Top";
+  font-family: Georgia, serif;
+  font-size: 17px;
+  color: #004e67;
+  background-color: #004e67;
+}
+
+#to-top-btn:hover {
+  cursor: pointer;
+  background-color: #004e67;
+}
+
+#to-top-btn.show {
+  opacity: 1;
+  visibility: visible;
+}
+
+.footer {
+  height: 100px;
+}
+
+#boathr {
+  border: 0px;
+  border-spacing: 0px;
+  padding: 0px;
+  border-collapse;
+}

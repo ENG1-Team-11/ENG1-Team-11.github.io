@@ -81,6 +81,7 @@
     <div class="body">
 
         <!-- table of contents -->
+
         <h2>Documentation</h2>
         <ul class="list">
           <li><a href="#requirements">Requirements</a></li>
@@ -88,52 +89,439 @@
           <li><a href="#method">Method selection and planning</a></li>
           <li><a href="#risks">Risk assessment and mitigation</a></li>
           <li><a href="#implemenatation">Implementation</a></li>
-          <li><a href="#testing">Software Testing Report</a></li>
-          <li><a href="#integration">Continuous Integration Report</a></li>
         </ul>
 
 
+      <!-- Intro to deliverables -->
+
       <div class="contents">
 
-        <!-- placeholder for the actual text -->
-        <h2 id="requirements">Requirements</h2>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus tempor dolor ut lectus tempus lobortis.
-          In ac massa quis ex tincidunt auctor. Integer blandit auctor massa, sit amet pretium nibh rutrum at. Suspendisse
-          sed nisl eget mauris pharetra blandit. Mauris ipsum lectus, vulputate id scelerisque eget, molestie eu risus.
-          Aenean et faucibus est. Proin vel euismod est, elementum vehicula erat. Vestibulum eget euismod enim. Mauris
-          justo tellus, congue ut posuere id, ullamcorper eleifend urna. Morbi justo urna, sodales non dictum et, pharetra
-          id tortor. Etiam eget quam odio. Morbi urna ipsum, tristique nec odio in, volutpat lobortis lorem. Donec vel mi
-          sit amet felis pharetra eleifend et at turpis. Curabitur eget velit placerat, scelerisque nibh quis, auctor libero.</p>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus tempor dolor ut lectus tempus lobortis.
-          In ac massa quis ex tincidunt auctor. Integer blandit auctor massa, sit amet pretium nibh rutrum at. Suspendisse
-          sed nisl eget mauris pharetra blandit. Mauris ipsum lectus, vulputate id scelerisque eget, molestie eu risus.
-          Aenean et faucibus est. Proin vel euismod est, elementum vehicula erat. Vestibulum eget euismod enim. Mauris
-          jsto tellus, congue ut posuere id, ullamcorper eleifend urna. Morbi justo urna, sodales non dictum et, pharetra
-          id tortor. Etiam eget quam odio. Morbi urna ipsum, tristique nec odio in, volutpat lobortis lorem. Donec vel mi
-          sit amet felis pharetra eleifend et at turpis. Curabitur eget velit placerat, scelerisque nibh quis, auctor libero.</p>
+        <h2 id="requirements">Requirements</h2></br>
+        <h3 id="sson">Single Statement of Need</h3>
+        <p>Aim of our project is to create a Dragon Boat racing game, based on the real Dragon Boat Challenge held in York.
+          The game shall be enjoyable and playable on a low spec computer.</p>
+        <h3 id="eliciting">How the requirement were elicited</h3>
+        <p>In order to elicit requirements, we first researched how best to go about doing and presenting these as well as the point of requirements
+          engineering in a project. Requirements engineering is the process of discerning what the stakeholders want from the product, then presenting
+          it in a way which is readable and makes the set of requirements processable [1]. According to Sommerville [2], open interviews are often not
+          an ideal way to conduct research, so we elected to use a mostly closed-format interview in order to gather our initial set of user requirements.
+          Our initial interview was with our main stakeholder, Dr. Javier Cámara, and was used to gather basic information about the system we were to implement.</p>
+        <p>Our other stakeholder, the Communications Office at the University of York, was also represented by our main stakeholder in this
+          specific instance as they are in contact with them.  We had to do very little negotiation between stakeholders to decide on final
+          requirements because of a clean overlap in stakeholder interests.  Both stakeholders want a product that will be playable and enjoyable,
+          with the main stakeholder wanting it marketable additionally and the other stakeholder wanting it to be usable in promotional activities.
+          The majority of negotiation was between our team and the stakeholder to reach a compromise between what is possible given the allotted
+          resources and what the desired product is.</p>
+        <h3 id="req-representation">Representation format</h3>
+        <p>After completing the interview, we had to find a way to present them that would be understandable and concise.  There are four main ways to
+          present requirements - using natural language sentences, structured natural language, graphically  using UML or diagrams, or mathematically [3].
+          User requirements should be written in a way that describes what the functional and non-functional requirements mean in an understandable way,
+           so we wrote our requirements in a structured natural language format. This format involves writing the requirements using a standardised
+           template so that each requirement is unambiguous and clear, one of the main advantages of this format over natural language sentences.
+           Whilst it is less unambiguous than pure mathematical notation, it is often far easier for a customer to understand and means they are more
+          likely to accept the set of requirements.</p>
+        <hr>
+        <ul class="references">
+          <li>Dick,‌ ‌J.,‌ ‌Hull,‌ ‌E.‌ ‌and‌ ‌Jackson,‌ ‌K.,‌ ‌2017.‌ ‌‌<i>Requirements‌ ‌Engineering‌</i>.‌ ‌4th‌ ‌ed.‌ ‌Cham:‌ ‌Springer‌ ‌International‌ ‌Publishing,‌ ‌pp.93-65.‌</li>
+          <li>Sommerville,‌ ‌I.,‌ ‌2016.‌ <i>‌‌Software‌ ‌Engineering,‌ ‌Global‌ ‌Edition‌</i>.‌ ‌10th‌ ‌ed.‌ ‌NOIDA:‌ ‌Pearson‌ ‌Education‌ ‌Limited,‌ ‌p.116.‌</li>
+          <li>Sommerville,‌ ‌I.,‌ ‌2016.‌ ‌‌<i>Software‌ ‌Engineering,‌ ‌Global‌ ‌Edition‌</i>.‌ ‌10th‌ ‌ed.‌ ‌NOIDA:‌ ‌Pearson‌ ‌Education‌ ‌Limited,‌ ‌p.121.‌ ‌</li>
+        </ul></br>
+        <h3>User Requirements </h3>
+        <p>Our client has asked us to produce a game about Dragon Boat racing.  The player will control a boat over three heats and a final race, using
+          the keyboard and mouse to dodge obstacles which may slow them down or damage their craft.  Between these races, the player can upgrade their boat
+          if they have the required currency to do so, which will give them a competitive advantage.  The player will win if they have the fastest time, place
+          if they are second or third fastest, or lose otherwise.</p>
+        <ul class="req-list">
+          <li><span>UR_1 CUSTOMISATION</span>: Boats must have unique specs in terms of speed, acceleration, maneuverability, and robustness. Stated in the initial brief
+              <ul class="req-sublist"><li>Risk: The game becomes unnecessarily complex</li>
+              <li>Alternative: The stats of the rowers and upgradeable stats could be changed</li></ul></li>
+          <li><span>UR_2 STAMINA</span>: Over time, the stats of the boat will reduce. Stated in the initial brief.
+              <ul class="req-sublist"><li>Risk: The game could feel very restrictive.</li>
+              <li>Alternative: Either remove this feature or make it less restrictive.</li></ul></li>
+          <li><span>UR_3 STAY IN LANE</span>: The boat must stay in its lane or a penalty may be issued. Stated in the initial brief.
+              <ul class="req-sublist"><li>Risk: Lanes are too narrow or filled with too many obstacles</li>
+              <li>Alternative: Boats are penalised for collisions with other boats</li></ul></li>
+          <li><span>UR_4 OBSTACLES</span>: There are obstacles that the boat must avoid. Stated in the initial brief.
+              <ul class="req-sublist"><li>Risk: The game will become too complex</li>
+              <li>Alternative: Collisions could reduce the rowers stamina</li></ul></li>
+          <li><span>UR_5 DAMAGE</span>: Colliding with obstacles will cause damage to the boat until it breaks at 0 durability. Stated in the initial brief.
+              <ul class="req-sublist"><li>Risk: The game can become too difficult</li>
+              <li>Alternative: Damage instead impacts the speed or maneuverability of the boat</li></ul></li>
+          <li><span>UR_6 SCALING DIFFICULTY</span>: The difficulty of the game must increase with each subsequent leg. Stated in the initial brief.
+              <ul class="req-sublist"><li>Risk: The game could become too difficult toward the end of the race</li>
+              <li>Alternative: The time required to complete each leg could decrease</li></ul></li>
+          <li><span>UR_7 INPUT DEVICE</span>: The game should be playable using a keyboard & mouse. Assuming a UK QWERTY Keyboard is used
+              <ul class="req-sublist"><li>Risk: Alienating certain players who prefer a different device</li>
+              <li>Alternative: Include mappings for other input devices as well</li></ul></li>
+          <li><span>UR_8 MINIMUM REQUIREMENTS</span>: The game should be playable on a low spec computer. Assumed a dual-core laptop with 4GB of RAM less than 6 years old.
+              <ul class="req-sublist"><li>Risk: We can’t leverage more powerful hardware limiting the potential of the game</li>
+              <li>Alternative: The game could be developed for a higher minimum specification</li></ul></li>
+          <li><span>UR_9 CROSS PLATFORM</span>: The game may be playable on multiple platforms. Assumed users are on Windows, Linux or Mac OS X.
+              <ul class="req-sublist"><li>Risk: An increase in development time to have it work on all platforms</li>
+              <li>Alternative: We could target just one platform</li></ul></li>
+          <li><span>UR_10 TUTORIAL</span>: The game may have a tutorial to teach the user how to play. Assuming the user has no knowledge of the game
+              <ul class="req-sublist"><li>Risk: The tutorial is too long winded and simple</li>
+              <li>Alternative: Show the player the controls and let them figure out the rules</li></ul></li>
+          <li><span>UR_11 UPGRADES</span>: The game may have an upgrade system that allows the user to customise their boat as they would like it. Stated in the initial brief.
+              <ul class="req-sublist"><li>Risk: The game becomes unnecessarily complex</li>
+              <li>Alternative: The game could have power-ups for temporary stat upgrades</li></ul></li>
+      </ul>
+      <h3>Functional Requirements</h3>
+      <ul class="req-list">
+        <li>UR_1 CUSTOMISATION:</br>
+        <span>FR_1.1   CUSTOM ACCELERATION</span>: Boat acceleration statistic should affect how quickly the boat gains speed</br>
+        <span>FR_1.2   CUSTOM MANEUVERABILITY</span>: Boat maneuverability statistic should affect how quickly the boat can turn or strafe</br>
+        <span>FR_1.3   CUSTOM ROBUSTNESS</span>: Boat robustness statistic should affect how much damage the boat can take</br>
+        <span>FR_1.4   CUSTOM SPEED</span>: Boat speed statistic should affect how fast the boat moves</br>
+        All Stated in the initial brief.<ul class="req-sublist">
+            <li>Risk: Stats are not  well balanced making some boats better than others</li>
+            <li>Alternative: The stats only make a small difference so no boats are too hard or too easy to win with</li></li></ul>
+        <li>UR_3   STAY IN LANE:</br>
+        <span>FR_3.1   COLLISION LANE</span>: Boat colliding with another lane leads to a penalty being issued</br>
+        Stated in the initial brief.<ul class="req-sublist">
+            <li>Risk: Penalties are too harsh making user play too safely</li>
+            <li>Alternative: Lanes are wider making it harder to collide with another lane</li></ul></li>
+        <li>UR_4   OBSTACLES:</br>
+        <span>FR_4.1   OBSTACLE SPAWNING</span>: Obstacles will spawn at a rate directly proportional to which leg the player is on</br>
+        Stated in the initial brief.<ul class="req-sublist">
+            <li>Risk: Obstacles become too hard to avoid on the later legs of the race</li>
+            <li>Alternative: More obstacles spawn at the start of the race when your stats are at their highest making it easier to
+            avoid the obstacles</li></ul></li>
+        <li>UR_5   DAMAGE:</br>
+        <span>FR_5.1   COLLISION OBSTACLES</span>: Boat colliding with objects will lead to damage to the boat</br>
+        <span>FR_5.2   DAMAGE GAME OVER</span>: Taking enough damage to reduce the boat to 0 health will lead to the game ending</br>
+        <span>FR_5.3   DAMAGE STATS</span>: Taking damage will affect the speed, acceleration, and maneuverability of the boat</br>
+        All stated in the initial brief.<ul class="req-sublist">
+            <li>Risk: The effect of damage on the boat will make it too hard to win a race</li>
+            <li>Alternative: The effect of damage to a boat is greatly reduced</li></ul></li>
+        <li>UR_6   SCALING DIFFICULTY:</br>
+        <span>FR_6.1   LEVEL SYSTEM</span>: Each leg of the race should be treated as a different level, which will be loaded when played</br>
+        <span>FR_6.2   OBSTACLE COUNT</span>: The number of obstacles in the lane increases with each leg</br>
+        <span>FR_6.3   STAT DECAY</span>: The stamina and health drain on the boat increases with each leg</br>
+        Stated in the initial brief.<ul class="req-sublist">
+            <li>Risk: The race will become too difficult towards the last legs</li>
+            <li>Alternative: Other boats become faster in later legs</li></ul></li>
+        <li>UR_7   INPUT DEVICE:</br>
+        <span>FR_7.1   INPUT SYSTEM</span>: User pressing assigned keys will lead to the boat moving</br>
+        Stated in the initial brief.<ul class="req-sublist">
+            <li>Risk: The users input device of choice isn't supported by the game</li>
+            <li>Alternative: We add support for more input devices</li></ul></li>
+        <li>UR_10   TUTORIAL:</br>
+        <span>FR_10.1   TUTORIAL LEVEL</span>: The tutorial is a special-case level that will only play once</br>
+        Assuming the user has no knowledge of the game.<ul class="req-sublist">
+            <li>Risk: The level is too drawn out and the user gets bored</li>
+            <li>Alternative: Show the player the controls and let them figure out the rules</li></ul></li>
+        <li>UR_11   UPGRADES:</br>
+        <span>FR_11.1   UPGRADE SYSTEM</span>: Upgrading a boat stat should directly affect the relevant statistic</br>
+        <span>FR_11.2   CURRENCY</span>: Upgrades must be purchased with a special currency that can be earned during races</span>
+        All stated in the initial brief<ul class="req-sublist">
+            <li>Risk: Boats become too powerful from upgrades making the game too easy</li>
+            <li>Alternative: Opponent boats also get upgrades so the game doesn't become too easy</li></ul></li>
+    </ul>
+    <h3>Non-Functional Requirements</h3>
+    <ul class="req-list">
+      <li>UR_7   INPUT DEVICE:</br>
+      <span>NFR_7.1   LATENCY</span>: The response time must be less than 0.5 seconds and not exceed 2 seconds<ul class="req-sublist">
+          <li>Risk: We do not reach this goal and the game feels unresponsive</li></ul></li>
+      <li>UR_9   CROSS PLATFORM:</br>
+      <span>NFR_9.1   PLATFORM</span>: The game shall run on Windows, Linux and Mac OS<ul class="req-sublist">
+          <li>Risk: The game is not compatible with all systems excluding some players</li></ul></li>
+      <li>UR_8   MINIMUM REQUIREMENTS:</br>
+      <span>NFR_8.1   TARGET FRAME RATE</span>: The game must run at 30 FPS on the minimum hardware specifications</br>
+      <span>NFR_8.2   MAINTAINABILITY</span>: The game must be updated within 2 min</br>
+      <span>NFR_8.3   MAX MEMORY USAGE</span>: The game must be able to run on 1GB of RAM</br>
+      <span>NFR_8.4   STORAGE USAGE</span>: The game must use less than 500MB of space</br>
+      <span>NFR_8.5   RELIABILITY</span>: The game must not crash 99% of the time</br>
+      <span>NFR_8.6   USABILITY</span>: 90% of the target audience will understand the game within 1 min of their first try</br><ul class="req-sublist">
+          <li>Risk: We fail to meet these requirements meaning the game doesn't run on the minimum specifications</li></ul></li>
+      <li>UR_10   TUTORIAL:</br>
+      <span>NFR_10.1   ACCESSIBILITY</span>: An average user without any major vision, mental or physical disabilities shall be able to play the game
+      within 1 min after completing the tutorial<ul class="req-sublist">
+          <li>Risk: The tutorial level is too simple or too complex excluding players</li></ul></li>
+    </ul>
 
-          <a href="#" class="download-link">Download Requirements pdf >></a>
-        </div>
+        <div class="dlink-box"><a href="#" class="download-link" download>Download a pdf file &gt;&gt;</a></div>
+        <a href="#" class="link" target="_blank">View as a pdf file &gt;&gt;</a>
 
-        <div class="contents">
-          <h2 id="architecture">Architecture</h2>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus tempor dolor ut lectus tempus lobortis.
-            In ac massa quis ex tincidunt auctor. Integer blandit auctor massa, sit amet pretium nibh rutrum at. Suspendisse
-            sed nisl eget mauris pharetra blandit. Mauris ipsum lectus, vulputate id scelerisque eget, molestie eu risus.
-            Aenean et faucibus est. Proin vel euismod est, elementum vehicula erat. Vestibulum eget euismod enim. Mauris
-            justo tellus, congue ut posuere id, ullamcorper eleifend urna. Morbi justo urna, sodales non dictum et, pharetra
-            id tortor. Etiam eget quam odio. Morbi urna ipsum, tristique nec odio in, volutpat lobortis lorem. Donec vel mi
-            sit amet felis pharetra eleifend et at turpis. Curabitur eget velit placerat, scelerisque nibh quis, auctor libero.</p>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus tempor dolor ut lectus tempus lobortis.
-            In ac massa quis ex tincidunt auctor. Integer blandit auctor massa, sit amet pretium nibh rutrum at. Suspendisse
-            sed nisl eget mauris pharetra blandit. Mauris ipsum lectus, vulputate id scelerisque eget, molestie eu risus.
-            Aenean et faucibus est. Proin vel euismod est, elementum vehicula erat. Vestibulum eget euismod enim. Mauris
-            jsto tellus, congue ut posuere id, ullamcorper eleifend urna. Morbi justo urna, sodales non dictum et, pharetra
-            id tortor. Etiam eget quam odio. Morbi urna ipsum, tristique nec odio in, volutpat lobortis lorem. Donec vel mi
-            sit amet felis pharetra eleifend et at turpis. Curabitur eget velit placerat, scelerisque nibh quis, auctor libero.</p>
+      </div>
 
-            <a href="#" class="download-link">Download Architecture pdf >></a>
-          </div>
+      <div class="contents">
+
+        <h2 id="architecture">Architecture</h2></br>
+        <p>We used UML (Unified Modeling Language), which a standardized and most-used modeling language developed to help system and software developers
+           for specifying, visualizing, constructing, and documenting the artifacts of software systems. UML uses mostly graphical notations to express
+           the design of software projects, which, we decided, is the most straightforward way to communicate detailed information about the architecture
+           of our game.</p>
+        <h3 id="abstract">Abstract Architecture</h3>
+        <p>We created a set of diagrams – an Entity-Component-Systems model, Sequence diagram and a State diagram - in order to represent the abstract
+          architecture of the game. For the Entity-Component-Systems model and Sequence diagram we used PlantUML tool - an open-source tool that allows
+          users to create UML diagrams from a plain text language. As for the State diagram, we chose to use Lucidchart. It is a web-based platform allowing
+          users to collaborate on drawing, revising and sharing charts and diagrams.</p>
+        <div class="diagram">1) Entity-Coponent-System model</div>
+        <img src="../images/diagrams/entity-component-system.png">
+        <div class="diagram">2) Sequence diagram</div>
+        <img src="../images/diagrams/sequence-diagram.png" id="narrow">
+        <div class="diagram">3) State diagram</div>
+        <img src="../images/diagrams/state-diagram.png">
+        <h3 id="concrete">Concrete Architecture</h3>
+        <p>TBA</br></p>
+
+        <div class="dlink-box"><a href="#" class="download-link" download>Download a pdf file &gt;&gt;</a></div>
+        <a href="#" class="link" target="_blank">View as a pdf file &gt;&gt;</a>
+
+      </div>
+
+      <div class="contents">
+
+        <h2 id="method">Method Selection and Planning</h2></br>
+        <h3>Software Engineering Methods</h3>
+        <p>As a team, we have opted to follow an agile development methodology, specifically using a cross of the Scrum and Kanban frameworks.
+          The Agile methodology is an evolution of incremental development, a method involving breaking down a problem into many smaller steps,
+          and takes it a step further by encouraging adaptive planning and flexibility in development.</p>
+          <p>The <b>Scrum</b> framework is designed for smaller teams,
+           making it perfect for us. Goals are broken down into iterations which should take a short amount of time, and are completed within a set
+           amount of time known as a sprint. By using small sprints and defining small goals development can easily react to changes in requirements
+           or specifications, as well as being easier on the team since there are no massive goals to tackle. We have modified the Scrum framework slightly,
+          reducing the length of a sprint to one week to represent the complexity of the project.</p>
+          <p><b>Kanban</b> is a method to manage workloads by splitting the workload into smaller tasks that anybody can complete.  It allows for a more visual
+            representation of what work needs to be completed, what is in progress, and what has been finished, using a Kanban board.  These boards are
+            designed based on the context of development and may range from a simple todo, in progress, completed board to boards that also have stories,
+            restrictions, and other more complex features.  Any developer can take a job from the todo section of the list and commence work on it, moving
+            it through any intermediate stages before it is finally completed.</p>
+          <h3>Collaboration and Development Tools</h3>
+          <p>One of our primary tools in development is <b>Git</b>, a distributed version-control system.  Git allows for multiple programmers to work on the same
+            project by creating branches, putting their changes to the code into those branches, then merging them back into the main branch.  Additionally,
+            branches can be created for any size of change so are ideal for Scrum where changes are very small.  Changes can be committed to the repository
+            in 30 seconds and, provided that the same code hasn’t changed in the master branch, merged just as easily.  Additionally, if some code changes need
+            to be undone Git allows the user to simply reset to an earlier version of the code, uniquely identified by a hash value.</p>
+          <p>Other tools exist that fulfill a similar purpose, such as Apache Subversion or Mercurial, both version control tools.  Whilst equally feature
+            complete, providing branches and full versioning, Git was chosen as it is the most familiar tool to members of the team and most commonplace.
+            Additionally, if another version control software was selected, we would have to use a different repository hosting website as GitHub, for example,
+            only supports Git repositories.</p>
+          <p><b>GitHub</b> is another tool we are using in our development process.  GitHub is a website that provides repository hosting for Git, changing the
+            commit cycle such that you can also push your commits to the server, where they can be shared with other developers.  Other developers can then
+            fetch the remote branches and do their own work on them.  GitHub additionally provides tools such as Continuous Integration through
+            GitHub Actions and project management through GitHub Projects.</p>
+          <p><b>Github Projects</b> is a kanban board-style todo list allowing for the creation of boards and cards to go on those boards, which all developers can
+            then access and modify.  This is ideal for our chosen development methodology as it allows for tasks to be broken down into smaller parts and put
+            on a board where anyone can pick tasks, develop them, then move the task to the “completed” board.  Although lacking in some management features
+            and formatting, it is good enough for our purposes, which is using it in a Scrum-style workflow.  Other options include websites such as Trello,
+            which is similar to Projects but with more features such as colour coding and labelling, however we don’t need the additional features and having
+            everything in one place is far more convenient.</p>
+          <p>There are many alternatives to GitHub, providing the git repository hosting service.  One such alternative is BitBucket, which provides an almost
+            identical interface, as well as integration with Trello and Jira to provide features similar to GitHub projects.  In the end, we chose GitHub as it
+            is the most widely used repository hosting service in the world, and has all the features that we need.</p>
+          <p>Additionally, as we need to create documentation for our entire source, we will be using <b>Javadoc</b> to generate HTML documentation files which we
+            can easily transfer to our project website.  Javadoc reads through Java source files and generates documentation based on the method names and
+            Javadoc-style comments that accompany them.  Other solutions include Doxygen or Sphinx however these tools are primarily for C++ and Python
+            respectively, where Javadoc is designed specifically for use with Java.</p>
+          <p><b>Google Drive</b> is a cloud-based storage that provides 15GB or storage for free and also comes with a suite of office tools including Docs
+            (word processor), Sheets (alternative to MS Excel) and Slides (alternative to MS PowerPoint). One of the main advantages of Google Drive is the
+            ability to share documents and make edits in real-time, providing an easy way to collaborate within the team. There are many alternatives to Google
+            Docs such as Dropbox, OneDrive and Sync. However, Google Drive is the most common choice and also most familiar to all members of the team.</p>
+          <p><b>Discord</b> is a voice and text communication platform targeted mostly at the gaming community. It provides multiple useful features such as
+            the ability to create a private server and channels for different uses within it. In our example, we have a channel for design and risk ideas,
+            where team members can post and discuss their ideas and decisions. Discord allows sharing media files and the screen and is easy to use. Other
+            communication platforms exist, such as Zoom, which we also use for our weekly meetings as a project requirement, or Slack. However, most of the
+             members are most comfortable with using Discord.</p>
+          <p>For creating diagrams we chose to use <b>PlantUML</b> - an open-source tool that allows users to create UML diagrams from a plain text language
+            - and <b>Lucidchart</b> which is a web-based platform allowing users to collaborate on drawing, revising and sharing charts and diagrams. Both
+            tools are relatively easy to use and access which is the main advantage over other alternatives.</p>
+        <h3 id="organization">Project Organization</h3>
+        <ul class="plan-list">
+          <li>Team
+            <ul class="plan-sublist">
+              <li>Alexander Garrity</li>
+              <li>Samuel Hughes</li>
+              <li>Samuel Jones</li>
+              <li>Karina Strogonova</li>
+              <li>Aleksas Kliska</li>
+              <li>Seth Calvert-Green</li>
+            </ul>
+          </li>
+          <li>Stakeholders
+            <ul class="plan-sublist">
+              <li>Dr. Javier Camara</li>
+              <li>The University of York Communications Office</li>
+            </ul>
+          </li>
+          <li>Other clients
+            <ul class="plan-sublist">
+              <li>ENG1 Cohort 2</li>
+              <li>Students</li>
+            </ul>
+          </li>
+          <li>Communication mechanism and schedule
+            <ul class="plan-sublist">
+              <li>Discord</li>
+              <li>Zoom</li>
+              <li>GitHub</li>
+              <li>Google Drive</li>
+              <li>Deadline: 25th November</li>
+            </ul>
+          </li>
+        </ul>
+        <h3 id="resources">Resources</h3>
+        <ul class="plan-list">
+          <li>Preferences of the customer
+            <ul class="plan-sublist">
+              <li>Java Programming language</li>
+              <li>Playable on a low spec computer: dual-core laptop with 4GB of RAM</li>
+            </ul>
+          </li>
+          <li>Tools and infrastructure
+            <ul class="plan-sublist">
+              <li>GitHub</li>
+              <li>IDE of choice</li>
+              <li>Google Drive</li>
+              <li>Google Docs</li>
+              <li>libGDX framework</li>
+              <li>Javadoc</li>
+              <li>PlantUML tool</li>
+              <li>Lucidchart platform</li>
+            </ul>
+          </li>
+        </ul>
+        <h3 id="resources">Team Organization</h3>
+        <p>Roles and responsibilities:</p>
+        <ul class="plan-list">
+          <li>Alexander Garrity: Requirements, Method selection and planning, Implementation</li>
+          <li>Samuel Jones: Website</li>
+          <li>Samuel Hughes: Game design</li>
+          <li>Karina Strogonova: Architecture, Risk assessment and mitigation, Website, Planning</li>
+          <li>Seth Calvert-Green: editing deliverables</li>
+          <li>Aleksas Kliska: -</li>
+        </ul>
+        <p>Approach to team organization:</p>
+        <p>We tried to divide responsibilities evenly between all members of the team and let everyone contribute to the project.  We mostly focused
+          on 1-2 deliverables at a time, using the Assessment brief to identify all the relevant information and details that must be included in each
+          deliverable. Since we chose Scrum as our development framework, all tasks were done in small, week-long sprints. During the sprint, responsible
+          team members worked on their specific tasks, while others gathered information relevant to the project. After each sprint we had a weekly meeting
+          where we discussed what has been done and what is yet to be completed as well as assigned new tasks.<p>
+        <p>Additionally, we had our own Discord server where members could ask questions or discuss their tasks anytime. It allowed each member of the team
+          to have a clear understanding of the progress, decisions, project schedule and be able to share their own ideas.<p>
+        <p>Whenever any important decisions or changes to the project plan were made, we went back to the completed deliverables and made edits in order
+          to ensure that all deliverables are up to date.</p>
+        <p>This method is appropriate for our team and the project as it is perfect for small teams and provides everyone with an opportunity to contribute and stay informed about all decisions made within the team. In addition, it allows a certain degree of flexibility,  as the whole project is divided into small tasks that can be done by any member of the team in case if someone is sick or unwilling to participate. Additionally, our method allows us to react to changes and make new decisions without complications.</p>
+        <h3 id="resources">Project Plan</h3>
+        <ul class="schedule-list">
+          <li>Website<ul class="schedule-sublist">
+              <li>Appoint a member/members of the team</li>
+              <li>Decide upon the structure of the website, so that it is easy to navigate and access</li>
+              <li>Create a simple website</li>
+              <li>Maintain the website</li></ul></li>
+          <li>Requirements<ul class="schedule-list">
+              <li>Appoint a member/members of the team</li>
+              <li>Do a research, gather information using lecture slides and relevant literature</li>
+              <li>Meet the customer and identify user requirements</li>
+              <li>Identify functional and non-functional requirements</li>
+              <li>Identify associated risks and decide upon alternatives</li>
+              <li>Decide upon the presentation format</li>
+              <li>Add to the website</li>
+              <li>Maintain and update deliverable and website</li></ul></li>
+          <li>Architecture<ul class="schedule-list">
+              <li>Appoint a member/members of the team</li>
+              <li>Choose tools and the language</li>
+              <li>Design an abstract representation and construct diagrams</li>
+              <li>Design a concrete representation and construct diagrams</li>
+              <li>Justify the representation</li>
+              <li>Relate the concrete architecture to the requirements</li>
+              <li>Add to the website</li>
+              </li>Maintain and update deliverable and website</li></ul></li>
+          <li>Method selection and planning<ul class="schedule-list">
+              <li>Appoint a member/members of the team</li>
+              <li>Choose a development methodology</li>
+              <li>Choose development and collaboration tools to use</li>
+              <li>Justify the fitness of the chose tools and identify alternatives</li>
+              <li>Decide upon the team’s organization and justify</li>
+              <li>Make a project plan</li>
+              <li>Provide weekly snapshots</li>
+              <li>Discuss the evolution of the plan</li>
+              <li>Add to the website</li>
+              <li>Maintain and update deliverable and website</li></ul></li>
+          <li>Risk assessment and mitigation<ul class="schedule-list">
+              <li>Appoint a member/members of the team</li>
+              <li>Do a research, gather information</li>
+              <li>Identify possible risks, their likelihood, severity and mitigation</li>
+              <li>Justify the chosen format of presentation</li>
+              <li>Give a tabular representation</li>
+              <li>Add to the website</li>
+              <li>Maintain and update deliverable and website</li></ul></li>
+          <li>Implementation<ul class="schedule-list">
+              <li>Do a research, gather information</li>
+              <li>Decide upon the game design (graphics, music)</li>
+              <li>Write the code of the game</li>
+              <li>Identify unimplemented features</li>
+              <li>Add screenshots to the website</li>
+              <li>Provide an executable JAR of the game and a zip file with the code</li></ul></li>
+        <p>You can see our Gantt Chart <a href="gantt-pdf.pdf" target="_blank" class="link">here</a> or download .xlsx file
+          <a href="gantt.xlsx" download class="download-link">here</a></p>
+        <h3>How the plan evolved</h3>
+        <p>Start dates of some tasks were shifted and the overall progress of the project was delayed due to poor communication between the team members,
+          illnesses and inactivity of some members. As a result, we started working on the implementation much later than planned.</p>
+        <p>We originally planned to present our product requirements in tabular form. In the end, we decided to write them in a structured natural language
+          format in order to present requirements, associated with them risks and alternatives in a more understandable way. It caused a delay and difficulty
+           moving on to other sections. Most of the other deliverables were completed on time.</p>
+        <div class="dlink-box"><a href="#" class="download-link" download>Download a pdf file &gt;&gt;</a></div>
+        <a href="#" class="link" target="_blank">View as a pdf file &gt;&gt;</a>
+
+      </div>
+
+      <div class="contents">
+
+        <h2 id="risks">Risk Assessment and Mitigation</h2>
+        </br>
+        <h3 id="risk-intro">Introduction and justification</h3>
+        <p>In order to identify possible risks, we first defined our project objectives. Our main goal was to build a boat racing game that would
+          satisfy all the requirements of the customer, be playable and enjoyable. We then reviewed the requirements, including user, functional and
+          nonfunctional requirements, and went through our project plan to determine all possible factors that can affect the quality of the final product.</p>
+        <p>For documentation purposes we decided to organize possible risks in tabular format. We also divided all risks in three categories: “Project”,
+          “Product” and “Business”. “Project” category is assigned to the risks that might affect our project schedule and progressing speed. “Product” category
+          is for the risks that may potentially affect the quality of the game, for example, any hardware or software issues. As for “Business”, this
+          category is assigned to the risks that may affect the success of our product in the market.</p>
+        <p>In addition, we assigned likelihood and severity scores to each risk. For both likelihood and severity measurement we used a scale of “low”,
+          “medium” and “high” which is easy to understand and intuitive.</p>
+        <p>Potential risks have been identified by the whole project team, as all members of the team were involved. Any potential risk suggested
+          by any member was recorded and analysed. More specific/technical issues have also been assigned to specific team members that are working on
+          related parts of the project. If a new potential risk is found by a member in the future, it will be posted in the Discord dedicated channel,
+          then discussed and added to the table.</p>
+        <h3 id="table">Tabular format</h3>
+        <table>
+          <tr>
+            <th>ID</th>
+            <th>Type</th>
+            <th>Description</th>
+            <th>Likelihood</th>
+            <th>Severity</th>
+            <th>Mitigation</th>
+            <th>Owner</th>
+          </tr>
+          <tr>
+            <td>R1</td>
+            <td>Project</td>
+            <td>A team member is sick and doesn’t show up at a meeting</td>
+            <td>Medium</td>
+            <td>Medium</td>
+            <td>Assign the task to another member of the team to ensure that it is completed in time</td>
+            <td>All</td>
+          </tr>
+          <tr>
+            <td>R2</td>
+            <td>Project</td>
+            <td>Accidentally deleting a file from Google docs</td>
+            <td>Low</td>
+            <td>High</td>
+            <td>Make sure members keep backup copies on their computers</td>
+            <td>All</td>
+          </tr>
+        </table></br>
+
+        <div class="dlink-box"><a href="#" class="download-link" download>Download a pdf file &gt;&gt;</a></div>
+        <a href="#" class="link" target="_blank">View as a pdf file &gt;&gt;</a>
+
+      </div>
+
+
 
     </div>
 

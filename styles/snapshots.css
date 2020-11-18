@@ -1,0 +1,29 @@
+/* .column {
+  float: left;
+  width: 45%;
+  padding: 5px;
+}
+.row::after {
+  width: 800px;
+  content: "";
+  clear: both;
+  display: table;
+} */
+
+.row {
+  display: flex;
+}
+
+.column {
+  flex: 33.3%;
+  padding: 5px;
+}
+
+.column-spec {
+  flex: 50%;
+  padding: 5px;
+}
+
+.snap {
+  border: 1px solid #adb2ba;
+}

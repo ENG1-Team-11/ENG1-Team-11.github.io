@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="../styles/nav.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Requirements</title>
+</head>
+
+<body>
+
+    <script>
+        function openNav() {
+          document.getElementById("mainSidenav").style.width = "250px";
+          document.getElementById("main").style.marginLeft = "250px";
+        }
+        function closeNav() {
+          document.getElementById("mainSidenav").style.width = "0";
+          document.getElementById("main").style.marginLeft = "0";
+        }
+    </script>
+
+    <div id="mainSidenav" class="sidenav">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        <a href="../index.html" class="link">Home</a>
+        <a href="../about.html" class="link">About</a>
+        <a href="?" class="link">Requirements</a>
+        <a href="architecture.html" class="link">Architecture</a>
+        <a href="planning.html" class="link">Method selection and planning</a>
+        <a href="risks.html" class="link">Risk assessment and mitigation</a>
+        <a href="implementation.html" class="link">Implementation</a>
+        <a href="#" class="link">Game</a>
+        <a href="https://github.com/ENG1-Team-11/boatgame3d" class="link" target="_blank">GitHub project</a>
+    </div>
+
+    <div class="header">
+
+      <div onclick="openNav()" class="trigram">
+        <div class="trigram-line"></div>
+        <div class="trigram-line"></div>
+        <div class="trigram-line"></div>
+      </div>
+      <div class="main">
+          <h1>York Dragon Boat Race</h1>
+          <p>ENG1 Team 11 project</p>
+          <TABLE id="boathr" width="100%">
+            <TR id="boathr">
+              <TD width=75 id="boathr">
+                <img src="../images/head.png" width=75 height=75>
+              </TD>
+              <TD id="boathr">
+                <img src="../images/body.png" width=100% height=75>
+              </TD>
+              <TD width=75 id="boathr">
+                <img src="../images/tail.png" width=75 height=75>
+              </TD>
+            </TR>
+          </TABLE>
+      </div>
+
+    </div>
+
+    <div class="body">
+
+      <h2 id="requirements">Requirements</h2></br>
+      <h3 id="sson">Single Statement of Need</h3>
+      <p>Aim of our project is to create a Dragon Boat racing game, based on the real Dragon Boat Challenge held in York.
+        The game shall be enjoyable and playable on a low spec computer.</p>
+      <h3 id="eliciting">How the requirement were elicited</h3>
+      <p>In order to elicit requirements, we first researched how best to go about doing and presenting these as well as the point of requirements
+        engineering in a project. Requirements engineering is the process of discerning what the stakeholders want from the product, then presenting
+        it in a way which is readable and makes the set of requirements processable [1]. According to Sommerville [2], open interviews are often not
+        an ideal way to conduct research, so we elected to use a mostly closed-format interview in order to gather our initial set of user requirements.
+        Our initial interview was with our main stakeholder, Dr. Javier Cámara, and was used to gather basic information about the system we were to implement.</p>
+      <p>Our other stakeholder, the Communications Office at the University of York, was also represented by our main stakeholder in this
+        specific instance as they are in contact with them.  We had to do very little negotiation between stakeholders to decide on final
+        requirements because of a clean overlap in stakeholder interests.  Both stakeholders want a product that will be playable and enjoyable,
+        with the main stakeholder wanting it marketable additionally and the other stakeholder wanting it to be usable in promotional activities.
+        The majority of negotiation was between our team and the stakeholder to reach a compromise between what is possible given the allotted
+        resources and what the desired product is.</p>
+      <h3 id="req-representation">Presentation format</h3>
+      <p>After completing the interview, we had to find a way to present them that would be understandable and concise.  There are four main ways to
+        present requirements - using natural language sentences, structured natural language, graphically  using UML or diagrams, or mathematically [3].
+        User requirements should be written in a way that describes what the functional and non-functional requirements mean in an understandable way,
+         so we wrote our requirements in a structured natural language format. This format involves writing the requirements using a standardised
+         template so that each requirement is unambiguous and clear, one of the main advantages of this format over natural language sentences.
+         Whilst it is less unambiguous than pure mathematical notation, it is often far easier for a customer to understand and means they are more
+        likely to accept the set of requirements.</p>
+      <hr>
+      <ul class="references">
+        <li>Dick,‌ ‌J.,‌ ‌Hull,‌ ‌E.‌ ‌and‌ ‌Jackson,‌ ‌K.,‌ ‌2017.‌ ‌‌<i>Requirements‌ ‌Engineering‌</i>.‌ ‌4th‌ ‌ed.‌ ‌Cham:‌ ‌Springer‌ ‌International‌ ‌Publishing,‌ ‌pp.93-65.‌</li>
+        <li>Sommerville,‌ ‌I.,‌ ‌2016.‌ <i>‌‌Software‌ ‌Engineering,‌ ‌Global‌ ‌Edition‌</i>.‌ ‌10th‌ ‌ed.‌ ‌NOIDA:‌ ‌Pearson‌ ‌Education‌ ‌Limited,‌ ‌p.116.‌</li>
+        <li>Sommerville,‌ ‌I.,‌ ‌2016.‌ ‌‌<i>Software‌ ‌Engineering,‌ ‌Global‌ ‌Edition‌</i>.‌ ‌10th‌ ‌ed.‌ ‌NOIDA:‌ ‌Pearson‌ ‌Education‌ ‌Limited,‌ ‌p.121.‌ ‌</li>
+      </ul></br>
+      <h3>User Requirements </h3>
+      <p>Our client has asked us to produce a game about Dragon Boat racing.  The player will control a boat over three heats and a final race, using
+        the keyboard and mouse to dodge obstacles which may slow them down or damage their craft.  Between these races, the player can upgrade their boat
+        if they have the required currency to do so, which will give them a competitive advantage.  The player will win if they have the fastest time, place
+        if they are second or third fastest, or lose otherwise.</p>
+      <ul class="req-list">
+        <li><span>UR_1 CUSTOMISATION</span>: Boats must have unique specs in terms of speed, acceleration, maneuverability, and robustness. Stated in the initial brief
+            <ul class="req-sublist"><li>Risk: The game becomes unnecessarily complex</li>
+            <li>Alternative: The stats of the rowers and upgradeable stats could be changed</li></ul></li>
+        <li><span>UR_2 STAMINA</span>: Over time, the stats of the boat will reduce. Stated in the initial brief.
+            <ul class="req-sublist"><li>Risk: The game could feel very restrictive.</li>
+            <li>Alternative: Either remove this feature or make it less restrictive.</li></ul></li>
+        <li><span>UR_3 STAY IN LANE</span>: The boat must stay in its lane or a penalty may be issued. Stated in the initial brief.
+            <ul class="req-sublist"><li>Risk: Lanes are too narrow or filled with too many obstacles</li>
+            <li>Alternative: Boats are penalised for collisions with other boats</li></ul></li>
+        <li><span>UR_4 OBSTACLES</span>: There are obstacles that the boat must avoid. Stated in the initial brief.
+            <ul class="req-sublist"><li>Risk: The game will become too complex</li>
+            <li>Alternative: Collisions could reduce the rowers stamina</li></ul></li>
+        <li><span>UR_5 DAMAGE</span>: Colliding with obstacles will cause damage to the boat until it breaks at 0 durability. Stated in the initial brief.
+            <ul class="req-sublist"><li>Risk: The game can become too difficult</li>
+            <li>Alternative: Damage instead impacts the speed or maneuverability of the boat</li></ul></li>
+        <li><span>UR_6 SCALING DIFFICULTY</span>: The difficulty of the game must increase with each subsequent leg. Stated in the initial brief.
+            <ul class="req-sublist"><li>Risk: The game could become too difficult toward the end of the race</li>
+            <li>Alternative: The time required to complete each leg could decrease</li></ul></li>
+        <li><span>UR_7 INPUT DEVICE</span>: The game should be playable using a keyboard & mouse. Assuming a UK QWERTY Keyboard is used
+            <ul class="req-sublist"><li>Risk: Alienating certain players who prefer a different device</li>
+            <li>Alternative: Include mappings for other input devices as well</li></ul></li>
+        <li><span>UR_8 MINIMUM REQUIREMENTS</span>: The game should be playable on a low spec computer. Assumed a dual-core laptop with 4GB of RAM less than 6 years old.
+            <ul class="req-sublist"><li>Risk: We can’t leverage more powerful hardware limiting the potential of the game</li>
+            <li>Alternative: The game could be developed for a higher minimum specification</li></ul></li>
+        <li><span>UR_9 CROSS PLATFORM</span>: The game may be playable on multiple platforms. Assumed users are on Windows, Linux or Mac OS X.
+            <ul class="req-sublist"><li>Risk: An increase in development time to have it work on all platforms</li>
+            <li>Alternative: We could target just one platform</li></ul></li>
+        <li><span>UR_10 TUTORIAL</span>: The game may have a tutorial to teach the user how to play. Assuming the user has no knowledge of the game
+            <ul class="req-sublist"><li>Risk: The tutorial is too long winded and simple</li>
+            <li>Alternative: Show the player the controls and let them figure out the rules</li></ul></li>
+        <li><span>UR_11 UPGRADES</span>: The game may have an upgrade system that allows the user to customise their boat as they would like it. Stated in the initial brief.
+            <ul class="req-sublist"><li>Risk: The game becomes unnecessarily complex</li>
+            <li>Alternative: The game could have power-ups for temporary stat upgrades</li></ul></li>
+        </ul>
+        <h3>Functional Requirements</h3>
+        <ul class="req-list">
+          <li>UR_1 CUSTOMISATION:</br>
+          <span>FR_1.1   CUSTOM ACCELERATION</span>: Boat acceleration statistic should affect how quickly the boat gains speed</br>
+          <span>FR_1.2   CUSTOM MANEUVERABILITY</span>: Boat maneuverability statistic should affect how quickly the boat can turn or strafe</br>
+          <span>FR_1.3   CUSTOM ROBUSTNESS</span>: Boat robustness statistic should affect how much damage the boat can take</br>
+          <span>FR_1.4   CUSTOM SPEED</span>: Boat speed statistic should affect how fast the boat moves</br>
+          All Stated in the initial brief.<ul class="req-sublist">
+              <li>Risk: Stats are not  well balanced making some boats better than others</li>
+              <li>Alternative: The stats only make a small difference so no boats are too hard or too easy to win with</li></li></ul>
+          <li>UR_3   STAY IN LANE:</br>
+          <span>FR_3.1   COLLISION LANE</span>: Boat colliding with another lane leads to a penalty being issued</br>
+          Stated in the initial brief.<ul class="req-sublist">
+              <li>Risk: Penalties are too harsh making user play too safely</li>
+              <li>Alternative: Lanes are wider making it harder to collide with another lane</li></ul></li>
+          <li>UR_4   OBSTACLES:</br>
+          <span>FR_4.1   OBSTACLE SPAWNING</span>: Obstacles will spawn at a rate directly proportional to which leg the player is on</br>
+          Stated in the initial brief.<ul class="req-sublist">
+              <li>Risk: Obstacles become too hard to avoid on the later legs of the race</li>
+              <li>Alternative: More obstacles spawn at the start of the race when your stats are at their highest making it easier to
+              avoid the obstacles</li></ul></li>
+          <li>UR_5   DAMAGE:</br>
+          <span>FR_5.1   COLLISION OBSTACLES</span>: Boat colliding with objects will lead to damage to the boat</br>
+          <span>FR_5.2   DAMAGE GAME OVER</span>: Taking enough damage to reduce the boat to 0 health will lead to the game ending</br>
+          <span>FR_5.3   DAMAGE STATS</span>: Taking damage will affect the speed, acceleration, and maneuverability of the boat</br>
+          All stated in the initial brief.<ul class="req-sublist">
+              <li>Risk: The effect of damage on the boat will make it too hard to win a race</li>
+              <li>Alternative: The effect of damage to a boat is greatly reduced</li></ul></li>
+          <li>UR_6   SCALING DIFFICULTY:</br>
+          <span>FR_6.1   LEVEL SYSTEM</span>: Each leg of the race should be treated as a different level, which will be loaded when played</br>
+          <span>FR_6.2   OBSTACLE COUNT</span>: The number of obstacles in the lane increases with each leg</br>
+          <span>FR_6.3   STAT DECAY</span>: The stamina and health drain on the boat increases with each leg</br>
+          Stated in the initial brief.<ul class="req-sublist">
+              <li>Risk: The race will become too difficult towards the last legs</li>
+              <li>Alternative: Other boats become faster in later legs</li></ul></li>
+          <li>UR_7   INPUT DEVICE:</br>
+          <span>FR_7.1   INPUT SYSTEM</span>: User pressing assigned keys will lead to the boat moving</br>
+          Stated in the initial brief.<ul class="req-sublist">
+              <li>Risk: The users input device of choice isn't supported by the game</li>
+              <li>Alternative: We add support for more input devices</li></ul></li>
+          <li>UR_10   TUTORIAL:</br>
+          <span>FR_10.1   TUTORIAL LEVEL</span>: The tutorial is a special-case level that will only play once</br>
+          Assuming the user has no knowledge of the game.<ul class="req-sublist">
+              <li>Risk: The level is too drawn out and the user gets bored</li>
+              <li>Alternative: Show the player the controls and let them figure out the rules</li></ul></li>
+          <li>UR_11   UPGRADES:</br>
+          <span>FR_11.1   UPGRADE SYSTEM</span>: Upgrading a boat stat should directly affect the relevant statistic</br>
+          <span>FR_11.2   CURRENCY</span>: Upgrades must be purchased with a special currency that can be earned during races</span>
+          All stated in the initial brief<ul class="req-sublist">
+              <li>Risk: Boats become too powerful from upgrades making the game too easy</li>
+              <li>Alternative: Opponent boats also get upgrades so the game doesn't become too easy</li></ul></li>
+      </ul>
+      <h3>Non-Functional Requirements</h3>
+      <ul class="req-list">
+        <li>UR_7   INPUT DEVICE:</br>
+        <span>NFR_7.1   LATENCY</span>: The response time must be less than 0.5 seconds and not exceed 2 seconds<ul class="req-sublist">
+            <li>Risk: We do not reach this goal and the game feels unresponsive</li></ul></li>
+        <li>UR_9   CROSS PLATFORM:</br>
+        <span>NFR_9.1   PLATFORM</span>: The game shall run on Windows, Linux and Mac OS<ul class="req-sublist">
+            <li>Risk: The game is not compatible with all systems excluding some players</li></ul></li>
+        <li>UR_8   MINIMUM REQUIREMENTS:</br>
+        <span>NFR_8.1   TARGET FRAME RATE</span>: The game must run at 30 FPS on the minimum hardware specifications</br>
+        <span>NFR_8.2   MAINTAINABILITY</span>: The game must be updated within 2 min</br>
+        <span>NFR_8.3   MAX MEMORY USAGE</span>: The game must be able to run on 1GB of RAM</br>
+        <span>NFR_8.4   STORAGE USAGE</span>: The game must use less than 500MB of space</br>
+        <span>NFR_8.5   RELIABILITY</span>: The game must not crash 99% of the time</br>
+        <span>NFR_8.6   USABILITY</span>: 90% of the target audience will understand the game within 1 min of their first try</br><ul class="req-sublist">
+            <li>Risk: We fail to meet these requirements meaning the game doesn't run on the minimum specifications</li></ul></li>
+        <li>UR_10   TUTORIAL:</br>
+        <span>NFR_10.1   ACCESSIBILITY</span>: An average user without any major vision, mental or physical disabilities shall be able to play the game
+        within 1 min after completing the tutorial<ul class="req-sublist">
+            <li>Risk: The tutorial level is too simple or too complex excluding players</li></ul></li>
+      </ul>
+    </br>
+      <div class="dlink-box"><a href="#" class="download-link" download>Download a pdf file &gt;&gt;</a></div>
+      <a href="#" class="link" target="_blank">View as a pdf file &gt;&gt;</a>
+
+
+    </div>
+
+    <div class="footer">
+
+    </div>
+
+</body>
+
+</html>

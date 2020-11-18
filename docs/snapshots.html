@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="../styles/nav.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <link rel="stylesheet" href="../styles/snapshots.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Snapshots</title>
+</head>
+
+<body>
+
+    <script>
+        function openNav() {
+          document.getElementById("mainSidenav").style.width = "250px";
+          document.getElementById("main").style.marginLeft = "250px";
+        }
+
+        function closeNav() {
+          document.getElementById("mainSidenav").style.width = "0";
+          document.getElementById("main").style.marginLeft = "0";
+        }
+
+        var btn = $('#to-top-btn');
+
+        $(window).scroll(function() {
+          if ($(window).scrollTop() > 300) {
+            btn.addClass('show');
+          } else {
+            btn.removeClass('show');
+          }
+        });
+
+        btn.on('click', function(e) {
+          e.preventDefault();
+          $('html, body').animate({scrollTop:0}, '300');
+        });
+
+    </script>
+
+    <a id="to-top-btn"></a>
+
+    <div id="mainSidenav" class="sidenav">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        <a href="../index.html" class="link">Home</a>
+        <a href="../about.html" class="link">About</a>
+        <a href="requirements.html" class="link">Requirements</a>
+        <a href="architecture.html" class="link">Architecture</a>
+        <a href="planning.html" class="link">Method selection and planning</a>
+        <a href="risks.html" class="link">Risk assessment and mitigation</a>
+        <a href="implementation.html" class="link">Implementation</a>
+        <a href="#" class="link">Game</a>
+        <a href="https://github.com/ENG1-Team-11/boatgame3d" class="link" target="_blank">GitHub project</a>
+    </div>
+
+    <div class="header">
+
+      <div onclick="openNav()" class="trigram">
+        <div class="trigram-line"></div>
+        <div class="trigram-line"></div>
+        <div class="trigram-line"></div>
+      </div>
+      <div class="main">
+          <h1>York Dragon Boat Race</h1>
+          <p>ENG1 Team 11 project</p>
+          <TABLE id="boathr" width="100%">
+            <TR id="boathr">
+              <TD width=75 id="boathr">
+                <img src="../images/head.png" width=75 height=75>
+              </TD>
+              <TD id="boathr">
+                <img src="../images/body.png" width=100% height=75>
+              </TD>
+              <TD width=75 id="boathr">
+                <img src="../images/tail.png" width=75 height=75>
+              </TD>
+            </TR>
+          </TABLE>
+      </div>
+
+    </div>
+
+    <div class="body">
+
+      <h2>Weekly snapshots</h2>
+      <ul class="list">
+        <li><a href="#wk3">Week 3</a></li>
+        <li><a href="#wk4">Week 4</a></li>
+        <li><a href="#wk5">Week 5</a></li>
+        <li><a href="#wk6">Week 6</a></li>
+        <li><a href="#wk7">Week 7</a></li>
+        <li><a href="#wk8">Week 8</a></li>
+      </ul>
+      </br>
+      <h3 id="wk3">Week 3</h3>
+      <p>Requirements:</p>
+      <div class="row">
+        <div class="column">
+          <a href="files/snapshots/week3/req-19-Oct-1.png" target="_blank">
+            <img src="files/snapshots/week3/req-19-Oct-1.png" style="width:100%;" class="snap">
+          </a>
+        </div>
+        <div class="column">
+          <a href="files/snapshots/week3/req-19-Oct-2.png" target="_blank">
+            <img src="files/snapshots/week3/req-19-Oct-2.png" style="width:100%;" class="snap">
+          </a>
+        </div>
+        <div class="column">
+          <a href="files/snapshots/week3/req-19-Oct-3.png" target="_blank" rel="Click to view in full size">
+            <img src="files/snapshots/week3/req-19-Oct-3.png" style="width:100%;" class="snap">
+          </a>
+        </div>
+      </div>
+      <div class="row">
+        <div class="column">
+          <a href="files/snapshots/week3/req-19-Oct-4.png" target="_blank">
+            <img src="files/snapshots/week3/req-19-Oct-4.png" style="width:100%;" class="snap">
+          </a>
+        </div>
+        <div class="column"></div>
+        <div class="column"></div>
+      </div>
+
+      <h3 id="wk4">Week 4</h3>
+      <p>Requirements:</p>
+      <div class="row">
+        <div class="column">
+          <a href="files/snapshots/week4/req-22-Oct-1.png" target="_blank">
+            <img src="files/snapshots/week4/req-22-Oct-1.png" style="width:100%;" class="snap">
+          </a>
+        </div>
+        <div class="column">
+          <a href="files/snapshots/week4/req-22-Oct-2.png" target="_blank">
+            <img src="files/snapshots/week4/req-22-Oct-2.png" style="width:100%;" class="snap">
+          </a>
+        </div>
+        <div class="column">
+          <a href="files/snapshots/week4/req-22-Oct-3.png" target="_blank" rel="Click to view in full size">
+            <img src="files/snapshots/week4/req-22-Oct-3.png" style="width:100%;" class="snap">
+          </a>
+        </div>
+      </div>
+      <div class="row">
+        <div class="column">
+          <a href="files/snapshots/week4/req-22-Oct-4.png" target="_blank">
+            <img src="files/snapshots/week4/req-22-Oct-4.png" style="width:100%;" class="snap">
+          </a>
+        </div>
+        <div class="column">
+          <a href="files/snapshots/week4/req-22-Oct-5.png" target="_blank">
+            <img src="files/snapshots/week4/req-22-Oct-5.png" style="width:100%;" class="snap">
+          </a>
+        </div>
+        <div class="column">
+        </div>
+      </div>
+
+      <h3 id="wk5">Week 5</h3>
+      <p>Architecture:</p>
+      <div class="row">
+        <div class="column">
+          <a href="files/snapshots/week5/arch-29-Oct-1.png" target="_blank">
+            <img src="files/snapshots/week5/arch-29-Oct-1.png" style="width:100%;" class="snap">
+          </a>
+        </div>
+        <div class="column">
+          <a href="files/snapshots/week5/arch-29-Oct-2.png" target="_blank">
+            <img src="files/snapshots/week5/arch-29-Oct-2.png" style="width:100%;" class="snap">
+          </a>
+        </div>
+        <div class="column">
+          <a href="files/snapshots/week5/arch-29-Oct-3.png" target="_blank" rel="Click to view in full size">
+            <img src="files/snapshots/week5/arch-29-Oct-3.png" style="width:100%;" class="snap">
+          </a>
+        </div>
+      </div>
+      <p>Method selection and planning:</p>
+      <div class="row">
+        <div class="column">
+          <a href="files/snapshots/week5/plan-29-Oct-1.png" target="_blank">
+            <img src="files/snapshots/week5/plan-29-Oct-1.png" style="width:100%;" class="snap">
+          </a>
+        </div>
+        <div class="column">
+        </div>
+        <div class="column">
+        </div>
+      </div>
+
+      <h3 id="wk6">Week 6</h3>
+      <p>Requirements:</p>
+      <div class="row">
+        <div class="column">
+          <a href="files/snapshots/week6/req-5-Nov-1.png" target="_blank">
+            <img src="files/snapshots/week6/req-5-Nov-1.png" style="width:100%;" class="snap">
+          </a>
+        </div>
+        <div class="column">
+          <a href="files/snapshots/week6/req-5-Nov-2.png" target="_blank">
+            <img src="files/snapshots/week6/req-5-Nov-2.png" style="width:100%;" class="snap">
+          </a>
+        </div>
+        <div class="column">
+          <a href="files/snapshots/week6/req-5-Nov-3.png" target="_blank" rel="Click to view in full size">
+            <img src="files/snapshots/week6/req-5-Nov-3.png" style="width:100%;" class="snap">
+          </a>
+        </div>
+      </div>
+      <div class="row">
+        <div class="column">
+          <a href="files/snapshots/week6/req-5-Nov-4.png" target="_blank">
+            <img src="files/snapshots/week6/req-5-Nov-4.png" style="width:100%;" class="snap">
+          </a>
+        </div>
+        <div class="column">
+          <a href="files/snapshots/week6/req-5-Nov-5.png" target="_blank">
+            <img src="files/snapshots/week6/req-5-Nov-5.png" style="width:100%;" class="snap">
+          </a>
+        </div>
+        <div class="column">
+          <a href="files/snapshots/week6/req-5-Nov-6.png" target="_blank" rel="Click to view in full size">
+            <img src="files/snapshots/week6/req-5-Nov-6.png" style="width:100%;" class="snap">
+          </a>
+        </div>
+      </div>
+      <div class="row">
+        <div class="column">
+          <a href="files/snapshots/week6/req-5-Nov-7.png" target="_blank">
+            <img src="files/snapshots/week6/req-5-Nov-7.png" style="width:100%;" class="snap">
+          </a>
+        </div>
+        <div class="column">
+        </div>
+        <div class="column">
+        </div>
+      </div>
+      <p>Risk assessments and mitigation:</p>
+      <div class="row">
+        <div class="column">
+          <a href="files/snapshots/week6/risk-5-Nov-1.png" target="_blank">
+            <img src="files/snapshots/week6/risk-5-Nov-1.png" style="width:100%;" class="snap">
+          </a>
+        </div>
+        <div class="column">
+          <a href="files/snapshots/week6/risk-5-Nov-2.png" target="_blank">
+            <img src="files/snapshots/week6/risk-5-Nov-2.png" style="width:100%;" class="snap">
+          </a>
+        </div>
+        <div class="column">
+          <a href="files/snapshots/week6/risk-5-Nov-3.png" target="_blank" rel="Click to view in full size">
+            <img src="files/snapshots/week6/risk-5-Nov-3.png" style="width:100%;" class="snap">
+          </a>
+        </div>
+      </div>
+      <div class="row">
+        <div class="column">
+          <a href="files/snapshots/week6/risk-5-Nov-4.png" target="_blank">
+            <img src="files/snapshots/week6/risk-5-Nov-4.png" style="width:100%;" class="snap">
+          </a>
+        </div>
+        <div class="column">
+        </div>
+        <div class="column">
+        </div>
+      </div>
+
+      <h3 id="wk7">Week 7</h3>
+      <p>Requirements:</p>
+      <div class="row">
+        <div class="column">
+          <a href="files/snapshots/week7/req-12-Nov-1.png" target="_blank">
+            <img src="files/snapshots/week7/req-12-Nov-1.png" style="width:100%;" class="snap">
+          </a>
+        </div>
+        <div class="column">
+          <a href="files/snapshots/week7/req-12-Nov-2.png" target="_blank">
+            <img src="files/snapshots/week7/req-12-Nov-2.png" style="width:100%;" class="snap">
+          </a>
+        </div>
+        <div class="column">
+          <a href="files/snapshots/week7/req-12-Nov-3.png" target="_blank" rel="Click to view in full size">
+            <img src="files/snapshots/week7/req-12-Nov-3.png" style="width:100%;" class="snap">
+          </a>
+        </div>
+      </div>
+      <div class="row">
+        <div class="column">
+          <a href="files/snapshots/week7/req-12-Nov-4.png" target="_blank">
+            <img src="files/snapshots/week7/req-12-Nov-4.png" style="width:100%;" class="snap">
+          </a>
+        </div>
+        <div class="column">
+        </div>
+        <div class="column">
+        </div>
+      </div>
+
+      <h3 id="wk8">Week 8</h3>
+      <p>Architecture:</p>
+      <div class="row">
+        <div class="column">
+          <a href="files/snapshots/week8/arch-16-Nov-1.png" target="_blank">
+            <img src="files/snapshots/week8/arch-16-Nov-1.png" style="width:100%;" class="snap">
+          </a>
+        </div>
+        <div class="column">
+          <a href="files/snapshots/week8/arch-16-Nov-2.png" target="_blank">
+            <img src="files/snapshots/week8/arch-16-Nov-2.png" style="width:100%;" class="snap">
+          </a>
+        </div>
+        <div class="column">
+          <a href="files/snapshots/week8/arch-16-Nov-3.png" target="_blank" rel="Click to view in full size">
+            <img src="files/snapshots/week8/arch-16-Nov-3.png" style="width:100%;" class="snap">
+          </a>
+        </div>
+      </div>
+      <p>Method selection and planning:</p>
+      <div class="row">
+        <div class="column-spec">
+          <a href="files/snapshots/week8/gantt.png" target="_blank">
+            <img src="files/snapshots/week8/gantt.png" style="width:100%;" class="snap">
+          </a>
+        </div>
+        <div class="column-spec">
+          <a href="files/snapshots/week8/path.png" target="_blank">
+            <img src="files/snapshots/week8/path.png" style="width:100%;" class="snap">
+          </a>
+        </div>
+      </div>
+      <div class="row">
+        <div class="column">
+          <a href="files/snapshots/week8/plan-18-Nov-1.png" target="_blank">
+            <img src="files/snapshots/week8/plan-18-Nov-1.png" style="width:100%;" class="snap">
+          </a>
+        </div>
+        <div class="column">
+          <a href="files/snapshots/week8/plan-18-Nov-2.png" target="_blank">
+            <img src="files/snapshots/week8/plan-18-Nov-2.png" style="width:100%;" class="snap">
+          </a>
+        </div>
+        <div class="column">
+          <a href="files/snapshots/week8/plan-18-Nov-3.png" target="_blank" rel="Click to view in full size">
+            <img src="files/snapshots/week8/plan-18-Nov-3.png" style="width:100%;" class="snap">
+          </a>
+        </div>
+      </div>
+      <div class="row">
+        <div class="column">
+          <a href="files/snapshots/week8/plan-18-Nov-4.png" target="_blank">
+            <img src="files/snapshots/week8/plan-18-Nov-4.png" style="width:100%;" class="snap">
+          </a>
+        </div>
+        <div class="column">
+          <a href="files/snapshots/week8/plan-18-Nov-5.png" target="_blank">
+            <img src="files/snapshots/week8/plan-18-Nov-5.png" style="width:100%;" class="snap">
+          </a>
+        </div>
+        <div class="column">
+        </div>
+      </div>
+      <p>Requirements:</p>
+      <div class="row">
+        <div class="column">
+          <a href="files/snapshots/week8/req-16-Nov-1.png" target="_blank">
+            <img src="files/snapshots/week8/req-16-Nov-1.png" style="width:100%;" class="snap">
+          </a>
+        </div>
+        <div class="column">
+          <a href="files/snapshots/week8/req-16-Nov-2.png" target="_blank">
+            <img src="files/snapshots/week8/req-16-Nov-2.png" style="width:100%;" class="snap">
+          </a>
+        </div>
+        <div class="column">
+          <a href="files/snapshots/week8/req-16-Nov-3.png" target="_blank" rel="Click to view in full size">
+            <img src="files/snapshots/week8/req-16-Nov-3.png" style="width:100%;" class="snap">
+          </a>
+        </div>
+      </div>
+      <div class="row">
+        <div class="column">
+          <a href="files/snapshots/week8/req-16-Nov-4.png" target="_blank">
+            <img src="files/snapshots/week8/req-16-Nov-4.png" style="width:100%;" class="snap">
+          </a>
+        </div>
+        <div class="column">
+        </div>
+        <div class="column">
+        </div>
+      </div>
+      <p>Risk assessment and mitigation:</p>
+      <div class="row">
+        <div class="column">
+          <a href="files/snapshots/week8/risk-17-Nov-1.png" target="_blank">
+            <img src="files/snapshots/week8/risk-17-Nov-1.png" style="width:100%;" class="snap">
+          </a>
+        </div>
+        <div class="column">
+          <a href="files/snapshots/week8/risk-17-Nov-2.png" target="_blank">
+            <img src="files/snapshots/week8/risk-17-Nov-2.png" style="width:100%;" class="snap">
+          </a>
+        </div>
+        <div class="column">
+          <a href="files/snapshots/week8/risk-17-Nov-3.png" target="_blank" rel="Click to view in full size">
+            <img src="files/snapshots/week8/risk-17-Nov-3.png" style="width:100%;" class="snap">
+          </a>
+        </div>
+      </div>
+      <div class="row">
+        <div class="column">
+          <a href="files/snapshots/week8/risk-17-Nov-4.png" target="_blank">
+            <img src="files/snapshots/week8/risk-17-Nov-4.png" style="width:100%;" class="snap">
+          </a>
+        </div>
+        <div class="column">
+        </div>
+        <div class="column">
+        </div>
+      </div>
+
+
+
+
+    </div>
+
+    <div class="footer">
+
+    </div>
+
+</body>
+
+</html>

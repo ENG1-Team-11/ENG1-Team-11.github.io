@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="../styles/nav.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Risk assessment and mitigation</title>
+</head>
+
+<body>
+
+    <script>
+        function openNav() {
+          document.getElementById("mainSidenav").style.width = "250px";
+          document.getElementById("main").style.marginLeft = "250px";
+        }
+        function closeNav() {
+          document.getElementById("mainSidenav").style.width = "0";
+          document.getElementById("main").style.marginLeft = "0";
+        }
+    </script>
+
+    <div id="mainSidenav" class="sidenav">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        <a href="../index.html" class="link">Home</a>
+        <a href="../about.html" class="link">About</a>
+        <a href="requirements.html" class="link">Requirements</a>
+        <a href="architecture.html" class="link">Architecture</a>
+        <a href="planning.html" class="link">Method selection and planning</a>
+        <a href="?" class="link">Risk assessment and mitigation</a>
+        <a href="implementation.html" class="link">Implementation</a>
+        <a href="#" class="link">Game</a>
+        <a href="https://github.com/ENG1-Team-11/boatgame3d" class="link" target="_blank">GitHub project</a>
+    </div>
+
+    <div class="header">
+
+      <div onclick="openNav()" class="trigram">
+        <div class="trigram-line"></div>
+        <div class="trigram-line"></div>
+        <div class="trigram-line"></div>
+      </div>
+      <div class="main">
+          <h1>York Dragon Boat Race</h1>
+          <p>ENG1 Team 11 project</p>
+          <TABLE id="boathr" width="100%">
+            <TR id="boathr">
+              <TD width=75 id="boathr">
+                <img src="../images/head.png" width=75 height=75>
+              </TD>
+              <TD id="boathr">
+                <img src="../images/body.png" width=100% height=75>
+              </TD>
+              <TD width=75 id="boathr">
+                <img src="../images/tail.png" width=75 height=75>
+              </TD>
+            </TR>
+          </TABLE>
+      </div>
+
+    </div>
+
+    <div class="body">
+
+      <h2 id="risks">Risk Assessment and Mitigation</h2>
+      </br>
+      <h3 id="risk-intro">Introduction and justification</h3>
+      <p>In order to identify possible risks, we first defined our project objectives. Our main goal was to build a boat racing game that would
+        satisfy all the requirements of the customer, be playable and enjoyable. We then reviewed the requirements, including user, functional and
+        nonfunctional requirements, and went through our project plan to determine all possible factors that can affect the quality of the final product.</p>
+      <p>For documentation purposes we decided to organize possible risks in tabular format. We also divided all risks in three categories: “Project”,
+        “Product” and “Business”. “Project” category is assigned to the risks that might affect our project schedule and progressing speed. “Product” category
+        is for the risks that may potentially affect the quality of the game, for example, any hardware or software issues. As for “Business”, this
+        category is assigned to the risks that may affect the success of our product in the market, in our case - success of using our game for promotional
+        activities organized by The University of York Communications Office.</p>
+      <p>In addition, we assigned likelihood and severity scores to each risk. For both likelihood and severity measurement we used a scale of “low”,
+        “medium” and “high” which is easy to understand and intuitive.</p>
+      <p>Potential risks have been identified by the whole project team, as all members of the team were involved. Any potential risk suggested
+        by any member was recorded and analysed. More specific/technical issues have also been assigned to specific team members that are working on
+        related parts of the project. If a new potential risk is found by a member in the future, it will be posted in the Discord dedicated channel,
+        then discussed and added to the table.</p>
+      <h3 id="table">Tabular format</h3>
+      <table>
+
+        <tr>
+          <th>ID</th>
+          <th>Type</th>
+          <th>Description</th>
+          <th>Likelihood</th>
+          <th>Severity</th>
+          <th>Mitigation</th>
+          <th>Owner</th>
+        </tr>
+        <tr>
+          <td>R1</td>
+          <td>Project</td>
+          <td>A team member is sick and doesn’t show up at a meeting</td>
+          <td>Medium</td>
+          <td>Medium</td>
+          <td>Assign the task to another member of the team to ensure that it is completed in time</td>
+          <td>All</td>
+        </tr>
+        <tr>
+          <td>R2</td>
+          <td>Project</td>
+          <td>Accidentally deleting a file from Google Drive</td>
+          <td>Low</td>
+          <td>High</td>
+          <td>Make sure members keep backup copies on their computers</td>
+          <td>All</td>
+        </tr>
+        <tr>
+          <td>R3</td>
+          <td>Project</td>
+          <td>A team member does not contribute to the project</td>
+          <td>High</td>
+          <td>High</td>
+          <td>Make sure all tasks are completed by other team members</td>
+          <td>All</td>
+        </tr>
+        <tr>
+          <td>R4</td>
+          <td>Project</td>
+          <td>Miscommunications and lack of clarity, e.g. several members doing the same task, misunderstanding design decisions</td>
+          <td>Medium</td>
+          <td>Medium</td>
+          <td>Every team member must inform others about the parts of the project they are working on, ask for clarification when uncertain about something</td>
+          <td>All</td>
+        </tr>
+        <tr>
+          <td>R5</td>
+          <td>Project</td>
+          <td>Team is running out of time</td>
+          <td>High</td>
+          <td>High</td>
+          <td>Meet up more frequently and make sure every team member is involved</td>
+          <td>All</td>
+        </tr>
+        <tr>
+          <td>R6</td>
+          <td>Project</td>
+          <td>Conflicts within the team</td>
+          <td>Low</td>
+          <td>Medium</td>
+          <td>Try to resolve a conflict or minimize its effect on the projects</td>
+          <td>All</td>
+        </tr>
+        <tr>
+          <td>R7</td>
+          <td>Project</td>
+          <td>Misunderstanding customer requirements</td>
+          <td>Low</td>
+          <td>High</td>
+          <td>Schedule a meeting with the customer and make sure all requirements are understood and met</td>
+          <td>All</td>
+        </tr>
+        <tr>
+          <td>R8</td>
+          <td>Project</td>
+          <td>Project schedule is not clearly defined or understood</td>
+          <td>Low</td>
+          <td>Medium</td>
+          <td>Share the schedule, make sure every team member understands the plan and is aware of deadlines. Go through completed and
+            upcoming tasks at weekly meetings</td>
+          <td>All</td>
+        </tr>
+        <tr>
+          <td>R9</td>
+          <td>Project</td>
+          <td>Misunderstanding some of the assessment questions</td>
+          <td>Low</td>
+          <td>High</td>
+          <td>Contact the lecturer and make sure all question are understood and answered</td>
+          <td>All</td>
+        </tr>
+        <tr>
+          <td>R10</td>
+          <td>Business</td>
+          <td>The customer is not satisfied with the game design/implementation</td>
+          <td>Low</td>
+          <td>High</td>
+          <td>Set up a team meeting and discuss possible changes</td>
+          <td>Coders</td>
+        </tr>
+        <tr>
+          <td>R11</td>
+          <td>Product</td>
+          <td>Product doesn’t meet some user, functional or nonfunctional requirements</td>
+          <td>Low</td>
+          <td>High</td>
+          <td>Review the requirements at each stage of the project and make sure all of them are met</td>
+          <td>All</td>
+        </tr>
+        <tr>
+          <td>R12</td>
+          <td>Product/</br>Business</td>
+          <td>Product doesn’t meet the customer expectations, e.g game is too complex, too simple or not enjoyable</td>
+          <td>Low</td>
+          <td>High</td>
+          <td>Organize a team meeting and discuss possible changes or improvements</td>
+          <td>All</td>
+        </tr>
+        <tr>
+          <td>R13</td>
+          <td>Project</td>
+          <td>Lack of skills/ knowledge of team members</td>
+          <td>Low</td>
+          <td>Medium</td>
+          <td>Team members must learn/improve their skills through taking online courses, reading relevant literature or using any other resources</td>
+          <td>All</td>
+        </tr>
+        <tr>
+          <td>R14</td>
+          <td>Product</td>
+          <td>Lack of skills/ knowledge of team members</td>
+          <td>Low</td>
+          <td>Medium</td>
+          <td>Game is not playable on a low spec computer (i.e. dual-core laptop with 4GB of RAM)</td>
+          <td>Coders</td>
+        </tr>
+        <tr>
+          <td>R15</td>
+          <td>Product</td>
+          <td>Game is not playable on some platforms</td>
+          <td>Low</td>
+          <td>Medium</td>
+          <td>Set up a team meeting and discuss what adjustments can be made to the game to run on other platforms</td>
+          <td>Coders</td>
+        </tr>
+        <tr>
+          <td>R16</td>
+          <td>Product</td>
+          <td>Game mechanics/controls are too complex to understand</td>
+          <td>Low</td>
+          <td>Medium</td>
+          <td>Redesign the tutorial, think of other changes that may help</td>
+          <td>All</td>
+        </tr>
+        <tr>
+          <td>R17</td>
+          <td>Product</td>
+          <td>Game logic does not work as expected, e.g. durability doesn’t reduce when colliding with obstacles</td>
+          <td>Low</td>
+          <td>High</td>
+          <td>Members responsible for the implementation must go through</td>
+          <td>Coders</td>
+        </tr>
+        <tr>
+          <td>R18</td>
+          <td>Product</td>
+          <td>Game keeps crashing</td>
+          <td>Low</td>
+          <td>High</td>
+          <td>Members responsible for the implementation must go through the code and find the cause</td>
+          <td>Coders</td>
+        </tr>
+      </table></br>
+
+      </br>
+      <div class="dlink-box"><a href="#" class="download-link" download>Download a pdf file &gt;&gt;</a></div>
+      <a href="#" class="link" target="_blank">View as a pdf file &gt;&gt;</a>
+    </div>
+
+    <div class="footer">
+
+    </div>
+
+</body>
+
+</html>

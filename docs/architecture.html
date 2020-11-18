@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="../styles/nav.css">
     <link rel="stylesheet" href="../styles/main.css">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Documentation</title>
+    <title>Architecture</title>
 </head>
 
 <body>
@@ -17,37 +17,18 @@
           document.getElementById("mainSidenav").style.width = "250px";
           document.getElementById("main").style.marginLeft = "250px";
         }
-
         function closeNav() {
           document.getElementById("mainSidenav").style.width = "0";
           document.getElementById("main").style.marginLeft = "0";
         }
-
-        var btn = $('#to-top-btn');
-
-        $(window).scroll(function() {
-          if ($(window).scrollTop() > 300) {
-            btn.addClass('show');
-          } else {
-            btn.removeClass('show');
-          }
-        });
-
-        btn.on('click', function(e) {
-          e.preventDefault();
-          $('html, body').animate({scrollTop:0}, '300');
-        });
-
     </script>
-
-    <a id="to-top-btn"></a>
 
     <div id="mainSidenav" class="sidenav">
         <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
         <a href="../index.html" class="link">Home</a>
         <a href="../about.html" class="link">About</a>
         <a href="requirements.html" class="link">Requirements</a>
-        <a href="architecture.html" class="link">Architecture</a>
+        <a href="?" class="link">Architecture</a>
         <a href="planning.html" class="link">Method selection and planning</a>
         <a href="risks.html" class="link">Risk assessment and mitigation</a>
         <a href="implementation.html" class="link">Implementation</a>
@@ -84,6 +65,27 @@
 
     <div class="body">
 
+      <h2 id="architecture">Architecture</h2></br>
+      <p>We used UML (Unified Modeling Language), which a standardized and most-used modeling language developed to help system and software developers
+         for specifying, visualizing, constructing, and documenting the artifacts of software systems. UML uses mostly graphical notations to express
+         the design of software projects, which, we decided, is the most straightforward way to communicate detailed information about the architecture
+         of our game.</p>
+      <h3 id="abstract">Abstract Architecture</h3>
+      <p>We created a set of diagrams – an Entity-Component-Systems model, Sequence diagram and a State diagram - in order to represent the abstract
+        architecture of the game. For the Entity-Component-Systems model and Sequence diagram we used PlantUML tool - an open-source tool that allows
+        users to create UML diagrams from a plain text language. As for the State diagram, we chose to use Lucidchart. It is a web-based platform allowing
+        users to collaborate on drawing, revising and sharing charts and diagrams.</p>
+      <div class="diagram">1) Entity-Coponent-System model</div>
+      <img src="../images/diagrams/entity-component-system.png">
+      <div class="diagram">2) Sequence diagram</div>
+      <img src="../images/diagrams/sequence-diagram.png" id="narrow">
+      <div class="diagram">3) State diagram</div>
+      <img src="../images/diagrams/state-diagram.png">
+      <h3 id="concrete">Concrete Architecture</h3>
+      <p>TBA</br></p>
+    </br>
+      <div class="dlink-box"><a href="#" class="download-link" download>Download a pdf file &gt;&gt;</a></div>
+      <a href="#" class="link" target="_blank">View as a pdf file &gt;&gt;</a>
 
     </div>
 

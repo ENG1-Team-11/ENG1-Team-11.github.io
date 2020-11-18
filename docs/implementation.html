@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="../styles/nav.css">
     <link rel="stylesheet" href="../styles/main.css">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Documentation</title>
+    <title>Implementation</title>
 </head>
 
 <body>
@@ -17,30 +17,11 @@
           document.getElementById("mainSidenav").style.width = "250px";
           document.getElementById("main").style.marginLeft = "250px";
         }
-
         function closeNav() {
           document.getElementById("mainSidenav").style.width = "0";
           document.getElementById("main").style.marginLeft = "0";
         }
-
-        var btn = $('#to-top-btn');
-
-        $(window).scroll(function() {
-          if ($(window).scrollTop() > 300) {
-            btn.addClass('show');
-          } else {
-            btn.removeClass('show');
-          }
-        });
-
-        btn.on('click', function(e) {
-          e.preventDefault();
-          $('html, body').animate({scrollTop:0}, '300');
-        });
-
     </script>
-
-    <a id="to-top-btn"></a>
 
     <div id="mainSidenav" class="sidenav">
         <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
@@ -50,7 +31,7 @@
         <a href="architecture.html" class="link">Architecture</a>
         <a href="planning.html" class="link">Method selection and planning</a>
         <a href="risks.html" class="link">Risk assessment and mitigation</a>
-        <a href="implementation.html" class="link">Implementation</a>
+        <a href="?" class="link">Implementation</a>
         <a href="#" class="link">Game</a>
         <a href="https://github.com/ENG1-Team-11/boatgame3d" class="link" target="_blank">GitHub project</a>
     </div>
@@ -84,6 +65,8 @@
 
     <div class="body">
 
+      <h2>Implementation</h2>
+      <p>TBA</p>
 
     </div>
 

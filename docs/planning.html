@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="../styles/nav.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Method selection and planning</title>
+</head>
+
+<body>
+
+    <script>
+        function openNav() {
+          document.getElementById("mainSidenav").style.width = "250px";
+          document.getElementById("main").style.marginLeft = "250px";
+        }
+        function closeNav() {
+          document.getElementById("mainSidenav").style.width = "0";
+          document.getElementById("main").style.marginLeft = "0";
+        }
+    </script>
+
+    <div id="mainSidenav" class="sidenav">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        <a href="../index.html" class="link">Home</a>
+        <a href="../about.html" class="link">About</a>
+        <a href="requirements.html" class="link">Requirements</a>
+        <a href="architecture.html" class="link">Architecture</a>
+        <a href="?" class="link">Method selection and planning</a>
+        <a href="risks.html" class="link">Risk assessment and mitigation</a>
+        <a href="implementation.html" class="link">Implementation</a>
+        <a href="#" class="link">Game</a>
+        <a href="https://github.com/ENG1-Team-11/boatgame3d" class="link" target="_blank">GitHub project</a>
+    </div>
+
+    <div class="header">
+
+      <div onclick="openNav()" class="trigram">
+        <div class="trigram-line"></div>
+        <div class="trigram-line"></div>
+        <div class="trigram-line"></div>
+      </div>
+      <div class="main">
+          <h1>York Dragon Boat Race</h1>
+          <p>ENG1 Team 11 project</p>
+          <TABLE id="boathr" width="100%">
+            <TR id="boathr">
+              <TD width=75 id="boathr">
+                <img src="../images/head.png" width=75 height=75>
+              </TD>
+              <TD id="boathr">
+                <img src="../images/body.png" width=100% height=75>
+              </TD>
+              <TD width=75 id="boathr">
+                <img src="../images/tail.png" width=75 height=75>
+              </TD>
+            </TR>
+          </TABLE>
+      </div>
+
+    </div>
+
+    <div class="body">
+
+      <h2 id="method">Method Selection and Planning</h2></br>
+      <h3>Software Engineering Methods</h3>
+      <p>As a team, we have opted to follow an agile development methodology, specifically using a cross of the Scrum and Kanban frameworks.
+        The Agile methodology is an evolution of incremental development, a method involving breaking down a problem into many smaller steps,
+        and takes it a step further by encouraging adaptive planning and flexibility in development.</p>
+        <p>The <b>Scrum</b> framework is designed for smaller teams,
+         making it perfect for us. Goals are broken down into iterations which should take a short amount of time, and are completed within a set
+         amount of time known as a sprint. By using small sprints and defining small goals development can easily react to changes in requirements
+         or specifications, as well as being easier on the team since there are no massive goals to tackle. We have modified the Scrum framework slightly,
+        reducing the length of a sprint to one week to represent the complexity of the project.</p>
+        <p><b>Kanban</b> is a method to manage workloads by splitting the workload into smaller tasks that anybody can complete.  It allows for a more visual
+          representation of what work needs to be completed, what is in progress, and what has been finished, using a Kanban board.  These boards are
+          designed based on the context of development and may range from a simple todo, in progress, completed board to boards that also have stories,
+          restrictions, and other more complex features.  Any developer can take a job from the todo section of the list and commence work on it, moving
+          it through any intermediate stages before it is finally completed.</p>
+        <h3>Collaboration and Development Tools</h3>
+        <p>One of our primary tools in development is <b>Git</b>, a distributed version-control system.  Git allows for multiple programmers to work on the same
+          project by creating branches, putting their changes to the code into those branches, then merging them back into the main branch.  Additionally,
+          branches can be created for any size of change so are ideal for Scrum where changes are very small.  Changes can be committed to the repository
+          in 30 seconds and, provided that the same code hasn’t changed in the master branch, merged just as easily.  Additionally, if some code changes need
+          to be undone Git allows the user to simply reset to an earlier version of the code, uniquely identified by a hash value.</p>
+        <p>Other tools exist that fulfill a similar purpose, such as Apache Subversion or Mercurial, both version control tools.  Whilst equally feature
+          complete, providing branches and full versioning, Git was chosen as it is the most familiar tool to members of the team and most commonplace.
+          Additionally, if another version control software was selected, we would have to use a different repository hosting website as GitHub, for example,
+          only supports Git repositories.</p>
+        <p><b>GitHub</b> is another tool we are using in our development process.  GitHub is a website that provides repository hosting for Git, changing the
+          commit cycle such that you can also push your commits to the server, where they can be shared with other developers.  Other developers can then
+          fetch the remote branches and do their own work on them.  GitHub additionally provides tools such as Continuous Integration through
+          GitHub Actions and project management through GitHub Projects.</p>
+        <p><b>Github Projects</b> is a kanban board-style todo list allowing for the creation of boards and cards to go on those boards, which all developers can
+          then access and modify.  This is ideal for our chosen development methodology as it allows for tasks to be broken down into smaller parts and put
+          on a board where anyone can pick tasks, develop them, then move the task to the “completed” board.  Although lacking in some management features
+          and formatting, it is good enough for our purposes, which is using it in a Scrum-style workflow.  Other options include websites such as Trello,
+          which is similar to Projects but with more features such as colour coding and labelling, however we don’t need the additional features and having
+          everything in one place is far more convenient.</p>
+        <p>There are many alternatives to GitHub, providing the git repository hosting service.  One such alternative is BitBucket, which provides an almost
+          identical interface, as well as integration with Trello and Jira to provide features similar to GitHub projects.  In the end, we chose GitHub as it
+          is the most widely used repository hosting service in the world, and has all the features that we need.</p>
+        <p>Additionally, as we need to create documentation for our entire source, we will be using <b>Javadoc</b> to generate HTML documentation files which we
+          can easily transfer to our project website.  Javadoc reads through Java source files and generates documentation based on the method names and
+          Javadoc-style comments that accompany them.  Other solutions include Doxygen or Sphinx however these tools are primarily for C++ and Python
+          respectively, where Javadoc is designed specifically for use with Java.</p>
+        <p><b>Google Drive</b> is a cloud-based storage that provides 15GB or storage for free and also comes with a suite of office tools including Docs
+          (word processor), Sheets (alternative to MS Excel) and Slides (alternative to MS PowerPoint). One of the main advantages of Google Drive is the
+          ability to share documents and make edits in real-time, providing an easy way to collaborate within the team. There are many alternatives to Google
+          Docs such as Dropbox, OneDrive and Sync. However, Google Drive is the most common choice and also most familiar to all members of the team.</p>
+        <p><b>Discord</b> is a voice and text communication platform targeted mostly at the gaming community. It provides multiple useful features such as
+          the ability to create a private server and channels for different uses within it. In our example, we have a channel for design and risk ideas,
+          where team members can post and discuss their ideas and decisions. Discord allows sharing media files and the screen and is easy to use. Other
+          communication platforms exist, such as Zoom, which we also use for our weekly meetings as a project requirement, or Slack. However, most of the
+           members are most comfortable with using Discord.</p>
+        <p>For creating diagrams we chose to use <b>PlantUML</b> - an open-source tool that allows users to create UML diagrams from a plain text language
+          - and <b>Lucidchart</b> which is a web-based platform allowing users to collaborate on drawing, revising and sharing charts and diagrams. Both
+          tools are relatively easy to use and access which is the main advantage over other alternatives.</p>
+      <h3 id="organization">Project Organization</h3>
+      <ul class="plan-list">
+        <li>Team
+          <ul class="plan-sublist">
+            <li>Alexander Garrity</li>
+            <li>Samuel Hughes</li>
+            <li>Samuel Jones</li>
+            <li>Karina Strogonova</li>
+            <li>Aleksas Kliska</li>
+            <li>Seth Calvert-Green</li>
+          </ul>
+        </li>
+        <li>Stakeholders
+          <ul class="plan-sublist">
+            <li>Dr. Javier Camara</li>
+            <li>The University of York Communications Office</li>
+          </ul>
+        </li>
+        <li>Other clients
+          <ul class="plan-sublist">
+            <li>ENG1 Cohort 2</li>
+            <li>Students</li>
+          </ul>
+        </li>
+        <li>Communication mechanism and schedule
+          <ul class="plan-sublist">
+            <li>Discord</li>
+            <li>Zoom</li>
+            <li>GitHub</li>
+            <li>Google Drive</li>
+            <li>Deadline: 25th November</li>
+          </ul>
+        </li>
+      </ul>
+      <h3 id="resources">Resources</h3>
+      <ul class="plan-list">
+        <li>Preferences of the customer
+          <ul class="plan-sublist">
+            <li>Java Programming language</li>
+            <li>Playable on a low spec computer: dual-core laptop with 4GB of RAM</li>
+          </ul>
+        </li>
+        <li>Tools and infrastructure
+          <ul class="plan-sublist">
+            <li>GitHub</li>
+            <li>IDE of choice</li>
+            <li>Google Drive</li>
+            <li>Google Docs</li>
+            <li>libGDX framework</li>
+            <li>Javadoc</li>
+            <li>PlantUML tool</li>
+            <li>Lucidchart platform</li>
+          </ul>
+        </li>
+      </ul>
+      <h3 id="resources">Team Organization</h3>
+      <p>Roles and responsibilities:</p>
+      <ul class="plan-list">
+        <li>Alexander Garrity: Requirements, Method selection and planning, Implementation</li>
+        <li>Samuel Jones: Website</li>
+        <li>Samuel Hughes: Game design</li>
+        <li>Karina Strogonova: Architecture, Risk assessment and mitigation, Website, Planning</li>
+        <li>Seth Calvert-Green: editing deliverables</li>
+        <li>Aleksas Kliska: -</li>
+      </ul>
+      <p>Approach to team organization:</p>
+      <p>We tried to divide responsibilities evenly between all members of the team and let everyone contribute to the project.  We mostly focused
+        on 1-2 deliverables at a time, using the Assessment brief to identify all the relevant information and details that must be included in each
+        deliverable. Since we chose Scrum as our development framework, all tasks were done in small, week-long sprints. During the sprint, responsible
+        team members worked on their specific tasks, while others gathered information relevant to the project. After each sprint we had a weekly meeting
+        where we discussed what has been done and what is yet to be completed as well as assigned new tasks.<p>
+      <p>Additionally, we had our own Discord server where members could ask questions or discuss their tasks anytime. It allowed each member of the team
+        to have a clear understanding of the progress, decisions, project schedule and be able to share their own ideas.<p>
+      <p>Whenever any important decisions or changes to the project plan were made, we went back to the completed deliverables and made edits in order
+        to ensure that all deliverables are up to date.</p>
+      <p>This method is appropriate for our team and the project as it is perfect for small teams and provides everyone with an opportunity to contribute and stay informed about all decisions made within the team. In addition, it allows a certain degree of flexibility,  as the whole project is divided into small tasks that can be done by any member of the team in case if someone is sick or unwilling to participate. Additionally, our method allows us to react to changes and make new decisions without complications.</p>
+      <h3 id="resources">Project Plan</h3>
+      <ul class="schedule-list">
+        <li>Website<ul class="schedule-sublist">
+            <li>Appoint a member/members of the team</li>
+            <li>Decide upon the structure of the website, so that it is easy to navigate and access</li>
+            <li>Create a simple website</li>
+            <li>Maintain the website</li></ul></li>
+        <li>Requirements<ul class="schedule-list">
+            <li>Appoint a member/members of the team</li>
+            <li>Do a research, gather information using lecture slides and relevant literature</li>
+            <li>Meet the customer and identify user requirements</li>
+            <li>Identify functional and non-functional requirements</li>
+            <li>Identify associated risks and decide upon alternatives</li>
+            <li>Decide upon the presentation format</li>
+            <li>Add to the website</li>
+            <li>Maintain and update deliverable and website</li></ul></li>
+        <li>Architecture<ul class="schedule-list">
+            <li>Appoint a member/members of the team</li>
+            <li>Choose tools and the language</li>
+            <li>Design an abstract representation and construct diagrams</li>
+            <li>Design a concrete representation and construct diagrams</li>
+            <li>Justify the representation</li>
+            <li>Relate the concrete architecture to the requirements</li>
+            <li>Add to the website</li>
+            </li>Maintain and update deliverable and website</li></ul></li>
+        <li>Method selection and planning<ul class="schedule-list">
+            <li>Appoint a member/members of the team</li>
+            <li>Choose a development methodology</li>
+            <li>Choose development and collaboration tools to use</li>
+            <li>Justify the fitness of the chosen tools and identify alternatives</li>
+            <li>Decide upon the team’s organization and justify</li>
+            <li>Make a project plan</li>
+            <li>Provide weekly snapshots</li>
+            <li>Discuss the evolution of the plan</li>
+            <li>Add to the website</li>
+            <li>Maintain and update deliverable and website</li></ul></li>
+        <li>Risk assessment and mitigation<ul class="schedule-list">
+            <li>Appoint a member/members of the team</li>
+            <li>Do a research, gather information</li>
+            <li>Identify possible risks, their likelihood, severity and mitigation</li>
+            <li>Justify the chosen format of presentation</li>
+            <li>Give a tabular representation</li>
+            <li>Add to the website</li>
+            <li>Maintain and update deliverable and website</li></ul></li>
+        <li>Implementation<ul class="schedule-list">
+            <li>Do a research, gather information</li>
+            <li>Decide upon the game design (graphics, music)</li>
+            <li>Write the code of the game</li>
+            <li>Identify unimplemented features</li>
+            <li>Add screenshots to the website</li>
+            <li>Provide an executable JAR of the game and a zip file with the code</li></ul></li>
+        <li>Assessment<ul class="schedule-list">
+            <li>Submit our website URL and a zipfile with all deliverables</li></ul></li>
+      </ul>
+      <p>You can see our <b>Gantt Chart</b> <a href="https://docs.google.com/spreadsheets/d/1KMZFzdZZQuNogAXoSV0JFAQRN3T086FNC-I_u1MZ9_Y/edit?usp=sharing"
+        target="_blank" class="link">here</a> or download .xlsx file <a href="files/gantt.xlsx" download class="download-link">here &gt;&gt;</a></br>
+        or view .pdf file with the <b>Critical Path</b> <a href="files/crit-path.pdf" target="_blank" class="link">here &gt;&gt;</a></p>
+      <h3>How the plan evolved throughout the project</h3>
+      <p>Start dates of some tasks were shifted and the overall progress of the project was delayed due to poor communication between the team members,
+        illnesses and inactivity of some members. As a result, we started working on the implementation much later than planned. However, most of the
+        deliverables were completed on time.</p>
+      <p>We originally planned to present our product requirements in tabular form. In the end, we decided to write them in a structured natural language
+        format in order to present requirements, associated with them risks and alternatives in a clear and understandable way.  It caused a bit of a delay
+        and a difficulty moving on to other sections.</p>
+      <p>You can see our <b>Weekly snapshots</b> <a href="snapshots.html" class="link">here &gt;&gt;</a></p>
+       </br>
+      <div class="dlink-box"><a href="#" class="download-link" download>Download a pdf file &gt;&gt;</a></div>
+      <a href="#" class="link" target="_blank">View as a pdf file &gt;&gt;</a>
+
+
+    </div>
+
+    <div class="footer">
+
+    </div>
+
+</body>
+
+</html>

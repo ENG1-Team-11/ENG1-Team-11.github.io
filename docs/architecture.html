@@ -32,7 +32,7 @@
         <a href="planning.html" class="link">Method selection and planning</a>
         <a href="risks.html" class="link">Risk assessment and mitigation</a>
         <a href="implementation.html" class="link">Implementation</a>
-        <a href="#" class="link">Game</a>
+        <a href="../docs/javadoc/index.html" class="link" target="_blank">Javadocs</a>
         <a href="https://github.com/ENG1-Team-11/boatgame3d" class="link" target="_blank">GitHub project</a>
     </div>
 
@@ -71,18 +71,31 @@
          the design of software projects, which, we decided, is the most straightforward way to communicate detailed information about the architecture
          of our game.</p>
       <h3 id="abstract">Abstract Architecture</h3>
-      <p>We created a set of diagrams – an Entity-Component-Systems model, Sequence diagram and a State diagram - in order to represent the abstract
+      <p>We created a set of diagrams – an Entity-Component-System model, Sequence diagram and a State diagram - in order to represent the abstract
         architecture of the game. For the Entity-Component-Systems model and Sequence diagram we used PlantUML tool - an open-source tool that allows
         users to create UML diagrams from a plain text language. As for the State diagram, we chose to use Lucidchart. It is a web-based platform allowing
         users to collaborate on drawing, revising and sharing charts and diagrams.</p>
       <div class="diagram">1) Entity-Coponent-System model</div>
+      <p>We decided to use Entity-Component-System design pattern and build a UML class diagram. ECS is often used in game development as it allows a greater
+        flexibility in defining entities where every object in the game's scene is an entity (e.g. boat, obstacles, lane). Every entity consists of one or more
+        components which contain data or state. The behavior of an entity can be changed at runtime by systems that add, remove or mutate components.</p>
       <img src="../images/diagrams/entity-component-system.png">
       <div class="diagram">2) Sequence diagram</div>
+      <p>Sequence diagram describes how different objects interact with each other in particular scenarios. In our case, diagram shows different challenges,
+        e.g. obstacles in the lane, that the player must overcome to win the game as well as the consequences of failing or succeeding, e.g. reduced durability.</p>
       <img src="../images/diagrams/sequence-diagram.png" id="narrow">
       <div class="diagram">3) State diagram</div>
+      <p>State diagram depicts different states of the game, such as the tutorial mode, pause, main menu screen etc.</p>
       <img src="../images/diagrams/state-diagram.png">
       <h3 id="concrete">Concrete Architecture</h3>
-      <p>TBA</br></p>
+      <div class="diagram">1) Entity-Coponent-System model</div>
+      <img src="../images/diagrams/concrete-ecs.png">
+      <div class="diagram">2) Sequence diagram</div>
+      <img src="../images/diagrams/concrete-sequence.png">
+      <div class="diagram">3) State diagram</div>
+      <img src="../images/diagrams/concrete-state.png">
+      <h3 id="concrete">Justification</h3>
+      <p></p>  <!--how it build from abstract, relation to requirements, justification -->
     </br>
       <div class="dlink-box"><a href="#" class="download-link" download>Download a pdf file &gt;&gt;</a></div>
       <a href="#" class="link" target="_blank">View as a pdf file &gt;&gt;</a>

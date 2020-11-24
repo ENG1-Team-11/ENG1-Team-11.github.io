@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="../styles/nav.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Game</title>
+</head>
+
+<body>
+
+    <script>
+        function openNav() {
+          document.getElementById("mainSidenav").style.width = "250px";
+          document.getElementById("main").style.marginLeft = "250px";
+        }
+
+        function closeNav() {
+          document.getElementById("mainSidenav").style.width = "0";
+          document.getElementById("main").style.marginLeft = "0";
+        }
+
+        var btn = $('#to-top-btn');
+
+        $(window).scroll(function() {
+          if ($(window).scrollTop() > 300) {
+            btn.addClass('show');
+          } else {
+            btn.removeClass('show');
+          }
+        });
+
+        btn.on('click', function(e) {
+          e.preventDefault();
+          $('html, body').animate({scrollTop:0}, '300');
+        });
+
+    </script>
+
+    <a id="to-top-btn"></a>
+
+    <div id="mainSidenav" class="sidenav">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        <a href="../index.html" class="link">Home</a>
+        <a href="../about.html" class="link">About</a>
+        <a href="requirements.html" class="link">Requirements</a>
+        <a href="architecture.html" class="link">Architecture</a>
+        <a href="planning.html" class="link">Method selection and planning</a>
+        <a href="risks.html" class="link">Risk assessment and mitigation</a>
+        <a href="implementation.html" class="link">Implementation</a>
+        <a href="../docs/javadoc/index.html" class="link" target="_blank">Javadocs</a>
+        <a href="https://github.com/ENG1-Team-11/boatgame3d" class="link" target="_blank">GitHub project</a>
+    </div>
+
+    <div class="header">
+
+      <div onclick="openNav()" class="trigram">
+        <div class="trigram-line"></div>
+        <div class="trigram-line"></div>
+        <div class="trigram-line"></div>
+      </div>
+      <div class="main">
+          <h1>York Dragon Boat Race</h1>
+          <p>ENG1 Team 11 project</p>
+          <TABLE id="boathr" width="100%">
+            <TR id="boathr">
+              <TD width=75 id="boathr">
+                <img src="../images/head.png" width=75 height=75>
+              </TD>
+              <TD id="boathr">
+                <img src="../images/body.png" width=100% height=75>
+              </TD>
+              <TD width=75 id="boathr">
+                <img src="../images/tail.png" width=75 height=75>
+              </TD>
+            </TR>
+          </TABLE>
+      </div>
+
+    </div>
+
+    <div class="body">
+
+
+    </div>
+
+    <div class="footer">
+
+    </div>
+
+</body>
+
+</html>

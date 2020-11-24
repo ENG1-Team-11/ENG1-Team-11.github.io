@@ -168,6 +168,12 @@ span {
   text-decoration: none;
 }
 
+.ur-link {
+  color: #73090d;
+  text-decoration: none;
+  font-size: 20px;
+}
+
 .dlink-box {
   padding-bottom: 10px;
 }

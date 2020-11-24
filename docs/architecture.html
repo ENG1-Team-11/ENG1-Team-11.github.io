@@ -79,26 +79,46 @@
       <p>We decided to use Entity-Component-System design pattern and build a UML class diagram. ECS is often used in game development as it allows a greater
         flexibility in defining entities where every object in the game's scene is an entity (e.g. boat, obstacles, lane). Every entity consists of one or more
         components which contain data or state. The behavior of an entity can be changed at runtime by systems that add, remove or mutate components.</p>
-      <img src="../images/diagrams/entity-component-system.png">
+      <a href="../images/diagrams/entity-component-system.png" target="_blank"><img src="../images/diagrams/entity-component-system.png"></a>
       <div class="diagram">2) Sequence diagram</div>
       <p>Sequence diagram describes how different objects interact with each other in particular scenarios. In our case, diagram shows different challenges,
         e.g. obstacles in the lane, that the player must overcome to win the game as well as the consequences of failing or succeeding, e.g. reduced durability.</p>
-      <img src="../images/diagrams/sequence-diagram.png" id="narrow">
+      <a href="../images/diagrams/sequence-diagram.png" target="_blank"><img src="../images/diagrams/sequence-diagram.png" id="narrow"></a>
       <div class="diagram">3) State diagram</div>
       <p>State diagram depicts different states of the game, such as the tutorial mode, pause, main menu screen etc.</p>
-      <img src="../images/diagrams/state-diagram.png">
+      <a href="../images/diagrams/state-diagram.png" target="_blank"><img src="../images/diagrams/state-diagram.png"></a>
       <h3 id="concrete">Concrete Architecture</h3>
       <div class="diagram">1) Entity-Coponent-System model</div>
-      <img src="../images/diagrams/concrete-ecs.png">
-      <div class="diagram">2) Sequence diagram</div>
-      <img src="../images/diagrams/concrete-sequence.png">
-      <div class="diagram">3) State diagram</div>
-      <img src="../images/diagrams/concrete-state.png">
+      <p>We used ObjectAid UML Explorer, a code visualization tool for Eclipse IDE, in order to extract the concrete architecture.</p>
+      <a href="../images/diagrams/concrete-ECS.png" target="_blank"><img src="../images/diagrams/concrete-ECS.png"></a>
       <h3 id="concrete">Justification</h3>
-      <p></p>  <!--how it build from abstract, relation to requirements, justification -->
+      <p>We elected to implement an Entity-Component-System model over an inheritance model as it is more suited to both Java and the design of our game.
+         The ECS model allows for quick and simple creation of entities which will be fully managed by the systems, as well as separation of data and code
+         to keep the codebase maintainable and clean. The nature of an ECS model means that it is very easy to add new behaviours by creating a new system
+         and registering components to it once the initial work implementing an ECS is finished.</p>
+      <p>Concretely, our implementation of an ECS model is based on three interfaces - ISystem, IEntity, and IComponent -  which are made non-abstract by three
+         classes - System, Entity, and Component.  By extending the three classes, an ECS object can be created that is fully compliant with the rest of the objects
+         and ready to be added to an entity.  The Component and Entity classes both contain an ID which a system can use to find it or other component with, along
+         with accessor methods.  The System class provides a number of functions for a system to override to implement its own behaviours using.  These are executed
+         in a specific order so it can be guaranteed that certain code will run before other code if necessary.</p>
+      <p>For example, the Collision system extends the System class, ISystem, and is given the ColliderComponent, PositionComponent, and VelocityComponent
+        components.  From these it can check for collisions between entities and adjust their velocities accordingly, as well as apply damage if given a durability
+         component.  If implemented between two entities rather than on a system handling components, this would require the entities being given knowledge of
+         each other which would only stand to convolute each entity.</p>
+        <p>Furthermore, as Java does have certain basic language features such as multiple inheritance or operator overloading, it is harder to implement an
+         inheritance-based model as it must be done through pure abstract interfaces.  This means that each entity class would have to store all its own data
+         and override all its own methods which would stand to make the codebase messy and harder to maintain.  If implemented as a class inheriting multiple
+         interfaces, a player entity would likely have tens of functions and variables in one class, as opposed to being composed of 10 self-maintaining data
+         components using the ECS system.	</p>
+        <p>Additionally, the ECS system means that we can easily tune parameters of the game to change its overall balance whilst the game is running.
+         This allows us to fulfill requirements <a href="requirements.html#ur1" class="ur-link">UR_1</a>, <a href="requirements.html#ur4" class="ur-link">UR_4</a>,
+         <a href="requirements.html#ur6" class="ur-link">UR_6</a>, and <a href="requirements.html#ur11" class="ur-link">UR_11</a>.  These requirements regard changing
+         the stats of boats, spawning obstacles at a dynamic rate, scaling the difficulty, and upgrading the boat stats.  Using the systems implemented, the
+         parameters of these can easily be tweaked and modified to fulfill whatever requirement the client details.
+        </p>
     </br>
-      <div class="dlink-box"><a href="#" class="download-link" download>Download a pdf file &gt;&gt;</a></div>
-      <a href="#" class="link" target="_blank">View as a pdf file &gt;&gt;</a>
+      <div class="dlink-box"><a href="files/Arch1.pdf" class="download-link" download>Download a pdf file &gt;&gt;</a></div>
+      <a href="files/Arch1.pdf" class="link" target="_blank">View as a pdf file &gt;&gt;</a>
 
     </div>
 

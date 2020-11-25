@@ -104,10 +104,10 @@
         <li><span id="ur1">UR_1 CUSTOMISATION</span>: Boats must have unique specs in terms of speed, acceleration, maneuverability, and robustness. Stated in the initial brief
             <ul class="req-sublist"><li>Risk: The game becomes unnecessarily complex</li>
             <li>Alternative: The stats of the rowers and upgradeable stats could be changed</li></ul></li>
-        <li><span>UR_2 STAMINA</span>: Over time, the stats of the boat will reduce. Stated in the initial brief.
+        <li><span id="ur2">UR_2 STAMINA</span>: Over time, the stats of the boat will reduce. Stated in the initial brief.
             <ul class="req-sublist"><li>Risk: The game could feel very restrictive.</li>
             <li>Alternative: Either remove this feature or make it less restrictive.</li></ul></li>
-        <li><span>UR_3 STAY IN LANE</span>: The boat must stay in its lane or a penalty may be issued. Stated in the initial brief.
+        <li><span id="ur3">UR_3 STAY IN LANE</span>: The boat must stay in its lane or a penalty may be issued. Stated in the initial brief.
             <ul class="req-sublist"><li>Risk: Lanes are too narrow or filled with too many obstacles</li>
             <li>Alternative: Boats are penalised for collisions with other boats</li></ul></li>
         <li><span id="ur4">UR_4 OBSTACLES</span>: There are obstacles that the boat must avoid. Stated in the initial brief.
@@ -146,7 +146,7 @@
               <li>Risk: Stats are not  well balanced making some boats better than others</li>
               <li>Alternative: The stats only make a small difference so no boats are too hard or too easy to win with</li></li></ul>
           <li>UR_3   STAY IN LANE:</br>
-          <span>FR_3.1   COLLISION LANE</span>: Boat colliding with another lane leads to a penalty being issued</br>
+          <span id="fr31">FR_3.1   COLLISION LANE</span>: Boat colliding with another lane leads to a penalty being issued</br>
           Stated in the initial brief.<ul class="req-sublist">
               <li>Risk: Penalties are too harsh making user play too safely</li>
               <li>Alternative: Lanes are wider making it harder to collide with another lane</li></ul></li>
@@ -157,8 +157,8 @@
               <li>Alternative: More obstacles spawn at the start of the race when your stats are at their highest making it easier to
               avoid the obstacles</li></ul></li>
           <li>UR_5   DAMAGE:</br>
-          <span>FR_5.1   COLLISION OBSTACLES</span>: Boat colliding with objects will lead to damage to the boat</br>
-          <span>FR_5.2   DAMAGE GAME OVER</span>: Taking enough damage to reduce the boat to 0 health will lead to the game ending</br>
+          <span id="fr51">FR_5.1   COLLISION OBSTACLES</span>: Boat colliding with objects will lead to damage to the boat</br>
+          <span id="fr52">FR_5.2   DAMAGE GAME OVER</span>: Taking enough damage to reduce the boat to 0 health will lead to the game ending</br>
           <span>FR_5.3   DAMAGE STATS</span>: Taking damage will affect the speed, acceleration, and maneuverability of the boat</br>
           All stated in the initial brief.<ul class="req-sublist">
               <li>Risk: The effect of damage on the boat will make it too hard to win a race</li>
@@ -176,13 +176,13 @@
               <li>Risk: The users input device of choice isn't supported by the game</li>
               <li>Alternative: We add support for more input devices</li></ul></li>
           <li>UR_10   TUTORIAL:</br>
-          <span>FR_10.1   TUTORIAL LEVEL</span>: The tutorial is a special-case level that will only play once</br>
+          <span id="fr101">FR_10.1   TUTORIAL LEVEL</span>: The tutorial is a special-case level that will only play once</br>
           Assuming the user has no knowledge of the game.<ul class="req-sublist">
               <li>Risk: The level is too drawn out and the user gets bored</li>
               <li>Alternative: Show the player the controls and let them figure out the rules</li></ul></li>
           <li>UR_11   UPGRADES:</br>
-          <span>FR_11.1   UPGRADE SYSTEM</span>: Upgrading a boat stat should directly affect the relevant statistic</br>
-          <span>FR_11.2   CURRENCY</span>: Upgrades must be purchased with a special currency that can be earned during races</span>
+          <span id="fr111">FR_11.1   UPGRADE SYSTEM</span>: Upgrading a boat stat should directly affect the relevant statistic</br>
+          <span id="fr112">FR_11.2   CURRENCY</span>: Upgrades must be purchased with a special currency that can be earned during races</span>
           All stated in the initial brief<ul class="req-sublist">
               <li>Risk: Boats become too powerful from upgrades making the game too easy</li>
               <li>Alternative: Opponent boats also get upgrades so the game doesn't become too easy</li></ul></li>
